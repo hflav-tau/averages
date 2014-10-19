@@ -764,19 +764,19 @@ void TauLFV_UL_plot(Int_t when=2013001)
   TH1F * hBaBar = new TH1F("hBaBar", "", NDECAY+2, -1.5, float(NDECAY)+0.5);
   TH1F * hCLEO  = new TH1F("hCLEO",  "", NDECAY+2, -1.5, float(NDECAY)+0.5);
   TH1F * hLHCb  = new TH1F("hLHCb",  "", NDECAY+2, -1.5, float(NDECAY)+0.5); 
-  TH1F * hHFAG_CLs = new TH1F("hFAG_CLs",  "", NDECAY+2, -1.5, float(NDECAY)+0.5);
+  //  TH1F * hHFAG_CLs = new TH1F("hFAG_CLs",  "", NDECAY+2, -1.5, float(NDECAY)+0.5);
 
   hBelle->FillN(NDECAY, histbins, Belle);
   hBaBar->FillN(NDECAY, histbins, BaBar);
   hCLEO-> FillN(NDECAY, histbins, CLEO);
   hLHCb-> FillN(NDECAY, histbins, LHCb);
-  hHFAG_CLs-> FillN(NDECAY, histbins, HFAG_CLs);  
+  //  hHFAG_CLs-> FillN(NDECAY, histbins, HFAG_CLs);  
 
   hBelle->Scale(1.e-8);
   hBaBar->Scale(1.e-8);
   hCLEO->Scale(1.e-6);
   hLHCb->Scale(1.e-8);
-  hHFAG_CLs->Scale(1.e-8); 
+  //  hHFAG_CLs->Scale(1.e-8); 
 
   setLabels(hBelle);
   
@@ -792,13 +792,13 @@ void TauLFV_UL_plot(Int_t when=2013001)
   hBaBar->SetMarkerStyle(kFullTriangleDown); hBaBar->SetMarkerColor(kBlue); hBaBar->SetMarkerSize(1.5);
   hCLEO->SetMarkerStyle(kFullCircle);  hCLEO->SetMarkerColor(kMagenta);  hCLEO->SetMarkerSize(1.5);
   hLHCb->SetMarkerStyle(kFullSquare); hLHCb->SetMarkerColor(kBlack); hLHCb->SetMarkerSize(1.2); 
-  hHFAG_CLs->SetMarkerStyle(34); hHFAG_CLs->SetMarkerColor(kGreen); hHFAG_CLs-> SetMarkerSize(1.5); 
+  //  hHFAG_CLs->SetMarkerStyle(34); hHFAG_CLs->SetMarkerColor(kGreen); hHFAG_CLs-> SetMarkerSize(1.5); 
 
   TCanvas *c1 = new TCanvas("c1","",1700,800); 
   c1->SetBottomMargin(0.17);
   c1->SetTopMargin(0.02);
   c1->SetLeftMargin(0.10);
-  c1->SetRightMargin(0.2);
+  c1->SetRightMargin(0.15);
   c1->SetLogy(1) ;
   
   double ul_min=4.e-5;
@@ -810,7 +810,7 @@ void TauLFV_UL_plot(Int_t when=2013001)
   hBaBar->Draw("p,same");
   hCLEO->Draw("p,same");
   hLHCb->Draw("p,same"); 
-  hHFAG_CLs->Draw("p,same");
+  // hHFAG_CLs->Draw("p,same");
   c1->Update();
   
   double y_latex=2.e-5;
@@ -838,7 +838,7 @@ void TauLFV_UL_plot(Int_t when=2013001)
   TLine l7(PMUMUSS+0.5,ul_min,PMUMUSS+0.5,ul_max); l7.SetLineColor(kGray); l7.Draw();
   TLatex t7(((PILAM-PMUMUSS)*1.0/2.0)+PMUMUSS*1.0,y_latex,"BNV"); t7.SetTextAlign(21); t7.SetTextFont(42); t7.Draw();
   
-  TLegend *leg = new TLegend(0.8,0.3,0.95,0.5);
+  TLegend *leg = new TLegend(0.85,0.3,0.95,0.5);
   leg->SetBorderSize(0);
   leg->SetFillStyle(4000);
   leg->SetFillColor(0);
@@ -848,7 +848,7 @@ void TauLFV_UL_plot(Int_t when=2013001)
   leg->AddEntry(hBaBar,"BaBar","p");
   leg->AddEntry(hBelle,"Belle","p");
   leg->AddEntry(hLHCb,"LHCb","p");
-  leg->AddEntry(hHFAG_CLs, "HFAG CLs", "p");
+  //  leg->AddEntry(hHFAG_CLs, "HFAG CLs", "p");
   leg->Draw();
   c1->Update();
   //
