@@ -535,13 +535,14 @@ get.tex.meas.by.ref = function() {
     df = df[quant.order,]
 
     expnt = df$expnt[1]
+    cite.tex = paste("\\cite{", df$ref[1], "}", sep="")
     if (df$pub.flag[1] == "pub") {
       expnt = sub("^BaBar$", "\\\\babar", expnt, perl=TRUE, ignore.case=TRUE)
-      ref.tex = paste(df$cit[1], " (", expnt, ") \\cite{", df$ref[1], "}", sep="")
+      ref.tex = paste(df$cit[1], " (", expnt, ") ", cite.tex, sep="")
     } else {
       cit = df$cit[1]
       cit = sub("^BaBar", "\\\\babar", cit, perl=TRUE, ignore.case=TRUE)
-      ref.tex = paste(cit, " \\cite{", df$ref[1], "}", sep="")
+      ref.tex = paste(cit, cite.tex, sep=" ")
     }
 
     quant.descr = paste("\\htuse{", df$quant, ".gn}", " = ", "\\htuse{", df$quant, ".td}", sep="")
@@ -550,13 +551,15 @@ get.tex.meas.by.ref = function() {
     val.lines = paste(quant.descr, " & ", "\\htuse{", df$meas, "}", sep="")
     val.tex = paste(val.lines, collapse="\n\\\\\n")
 
-    list(cit=x, ref.tex=ref.tex, val.tex=val.tex)
+    list(cit=x, ref.tex=ref.tex, val.tex=val.tex, cite.tex=cite.tex, collab.tex=expnt)
   })
 
   meas.by.ref.defs = lapply(meas.by.ref, function(x) {
-    def.ref = paste("\\htdef{", x$cit, ".ref", "}{%\n", x$ref.tex, "}%", sep="")
+    def.cite = paste("\\htdef{", x$cit, ".cite", "}{", x$cite.tex, "}%", sep="")
+    def.collab = paste("\\htdef{", x$cit, ".collab", "}{", x$collab.tex, "}%", sep="")
+    def.ref = paste("\\htdef{", x$cit, ".ref", "}{", x$ref.tex, "}%", sep="")
     def.meas = paste("\\htdef{", x$cit, ".meas", "}{%\n", x$val.tex, "}%", sep="")
-    paste(def.ref, def.meas, sep="\n")
+    paste(def.cite, def.collab, def.ref, def.meas, sep="\n")
   })
   meas.by.ref.defs.tex = paste(meas.by.ref.defs, collapse="\n")
 
