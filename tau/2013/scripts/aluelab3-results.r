@@ -214,7 +214,7 @@ aluelab.results = function(args) {
 
   ## quant$quant.add.single("tau_tau", 290.6e-15, 1.0e-15)
   ##--- use HFAG 2014 average for tau lifetime (= PDG14)
-  quant$quant.add.single("tau_tau", 290.29e-15, 0.52e-15) ## changed14 
+  quant$quant.add.single("tau_tau", 290.29e-15, 0.52e-15) ## changed14
 
   ##--- m_tau HFAG 2009
   ## quant$quant.add.single("m_tau", 1776.7673082, 0.1507259)
@@ -358,34 +358,46 @@ aluelab.results = function(args) {
   quant$quant.add.single("Vus_kl3_moulson_ckm14", 0.2232, 0.0001*9)
   quant$quant.add.single("VusbyVud_moulson_ckm14", 0.2308, 0.0001*6)
   quant$quant.expr.add("Vus_kl2_moulson_ckm14", VusbyVud_moulson_ckm14 * Vud_moulson_ckm14)
-  
+
   ##
-  ## SU3 breaking correction, straight from papers
+  ## SU3 breaking correction
   ##
 
-  ##--- POS(KAON)08, A.Pich, Theoretical progress on the Vus determination from tau decays
+  ##
+  ## POS(KAON)08, A.Pich, Theoretical progress on the Vus determination from tau decays
+  ##
   ## deltaR.su3break.val = 0.216
   ## deltaR.su3break.err = 0.016
-  ##--- E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
+
+  ##
+  ## use deltaR_su3break from
+  ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
+  ##
   ## deltaR.su3break.val = 0.240
   ## deltaR.su3break.err = 0.032
   ## quant$quant.add.single("deltaR_su3break", deltaR.su3break.val, deltaR.su3break.err)
 
   ##
-  ## SU3 breaking correction, recompute from data following
+  ## recompute deltaR_su3break using updated m_s
   ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
   ##
+  ## deltaR_su3break = deltaR_su3break_pheno + deltaR_su3break_d2pert * m_s(GeV)^2 + deltaR_su3break_remain
+  ## - m_s = 93.5 +- 2.5 (PDG13) strange quark mass in GeV in the MSbar scheme at a renormalisation scale of mu = 2 GeV
+  ## - deltaR_su3break_pheno = 0.1544 +- 0.0037 phenomenological scalar and pseudo-scalarcontributions
+  ## - deltaR_su3break_d2pert = 9.3 +- 3.4 rest of the perturbative D=2 contribution
+  ## - deltaR_su3break_remain = 0.0034 +- 0.0028 remaining contributions
+  ##
 
-  ##--- s quark mass, PDG2013 ---upd14
-  quant$quant.add.single("m_s", 93.5, 2.5) ## changed14
   ##--- s quark mass, PDG2011
   ## quant$quant.add.single("m_s", 100, sqrt((20.^2 + 30.^2)/2.))
+  ##--- s quark mass, PDG2013 ---upd14
+  quant$quant.add.single("m_s", 93.5, 2.5) ## changed14
 
   ##--- E.Gamiz, M.Jamin, A.Pich, J.Prades, F.Schwab, |V_us| and m_s from hadronic tau decays
   quant$quant.add.single("deltaR_su3break_pheno", 0.1544, 0.0037)
-  quant$quant.add.single("deltaR_su3break_msd2", 9.3, 3.4)
+  quant$quant.add.single("deltaR_su3break_d2pert", 9.3, 3.4)
   quant$quant.add.single("deltaR_su3break_remain", 0.0034, 0.0028)
-  quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_msd2*(m_s/1000)^2 + deltaR_su3break_remain)
+  quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
 
   if (no.unit.constr.flag) {
     ##
@@ -535,7 +547,7 @@ aluelab.results = function(args) {
   ##--- http://arxiv.org/abs/1101.5138
   ## quant$quant.add.single("f_K_by_f_pi", 1.189, 0.007)
   ## quant$quant.add.single("f_K", 157, 2)
-  
+
   ##+++ check effect of lattice correlations
   ## quant$corr.add.single("f_K_by_f_pi", "f_K", 100/100)
 
