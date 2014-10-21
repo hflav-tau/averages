@@ -478,7 +478,7 @@ void aluAverPlot(const std::string& filename, const Int_t nPoints_def, Int_t can
   }
 
   const Float_t xtextNDC( (xtext-TVirtualPad::Pad()->GetX1()) / (TVirtualPad::Pad()->GetX2() - TVirtualPad::Pad()->GetX1()) );
-  HFAGTauLabel("2014, prelim.", xtextNDC, 0.03*plotScaleFact, 0.9 * Float_t(canvas_width) / Float_t(560));
+  HFAGTauLabel("Summer 2014", xtextNDC, 0.03*plotScaleFact, 0.9 * Float_t(canvas_width) / Float_t(560));
   
   std::string basefname(filename);
   size_t extPos = basefname.rfind('.');
