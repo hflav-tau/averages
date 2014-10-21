@@ -387,7 +387,7 @@ void TauLFV_UL_plot_comb(Int_t when=2013001)
   c1->SetRightMargin(0.15);
   c1->SetLogy(1) ;
   
-  double ul_min=4.e-5;
+  double ul_min=1.e-6;
   hBelle->SetMaximum(ul_min);
   double ul_max=4.e-9;
   hBelle->SetMinimum(ul_max);
