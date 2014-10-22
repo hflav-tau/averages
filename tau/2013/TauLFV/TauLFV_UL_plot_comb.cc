@@ -316,7 +316,7 @@ void SetUp()
   gStyle->SetGridStyle(1);
 }
 
-void TauLFV_UL_plot_comb(Int_t when=2013001)
+void TauLFV_UL_plot_comb(Int_t when=20141001)
 {
   SetUp();
   unsigned int ibin;
@@ -435,11 +435,11 @@ void TauLFV_UL_plot_comb(Int_t when=2013001)
   leg->Draw();
   c1->Update();
   //
-  HFAGTauLabel("2014, prelim.", -0.01, -0.02, 1.3);
-  //    HFAGTauLabel("Summer 2013", -0.01, -0.02, 1.3);
-    c1->Update();  
-  //  HFAGTauLabel("Winter 2012", -0.01, -0.02, 1.3);
-  //  c1->Update();  
+  //
+  // HFAGTauLabel("Winter 2012", -0.01, -0.02, 1.3);
+  // HFAGTauLabel("Summer 2013", -0.01, -0.02, 1.3);
+  HFAGTauLabel("Summer 2014", -0.01, -0.02, 1.3);
+  c1->Update();  
   
   c1->SaveAs(Form("TauLFV_UL_%d_averaged.pdf",when));
   c1->SaveAs(Form("TauLFV_UL_%d_averaged.eps",when));
