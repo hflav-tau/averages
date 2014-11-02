@@ -394,11 +394,29 @@ aluelab.results = function(args) {
   quant$quant.add.single("m_s", 93.5, 2.5) ## changed14
 
   ##--- E.Gamiz, M.Jamin, A.Pich, J.Prades, F.Schwab, |V_us| and m_s from hadronic tau decays
-  quant$quant.add.single("deltaR_su3break_pheno", 0.1544, 0.0037)
+  ## quant$quant.add.single("deltaR_su3break_pheno", 0.1544, 0.0037)
   quant$quant.add.single("deltaR_su3break_d2pert", 9.3, 3.4)
   quant$quant.add.single("deltaR_su3break_remain", 0.0034, 0.0028)
-  quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
 
+  ## 
+  ## K.Maltman, private comm. 2014
+  ## - use tau pi Kl2 poles
+  ## - FOPT 4 order
+  ##
+  quant$quant.add.single("deltaR_su3break_pheno", 0.1509, 0.0041) 
+  quant$quant.add.single("deltaR_su3break_d2pert", 11.36, 1.14)
+  quant$quant.add.single("deltaR_su3break_remain", 0.0084, 0.0185)
+  
+  ## quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
+
+  ## 
+  ## K.Maltman, private comm. 2014
+  ## - use FOPT 3rd loop order as central value (favoured by Lattice)
+  ## - use FOPT uncertainty
+  ## - add FOPT-CIPT 3rd order discrepancy as additional theory uncertainty
+  ##
+  quant$quant.add.single("deltaR_su3break", 0.254, 0.038)
+  
   if (no.unit.constr.flag) {
     ##
     ## if using constrained fit with dummy mode (Gamma998), i.e. unconstrained fit
