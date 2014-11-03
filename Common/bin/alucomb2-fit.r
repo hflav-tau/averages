@@ -65,6 +65,25 @@ alucomb.fit = function(combination, measurements, basename = "average", method =
     cat("  ", paste(quant.fmt[i.first:i.last], collapse=" "), "\n", sep="")
   }
 
+  quant.constr.names = sub(".c", "", names(unlist(c(combination$constr.lin.val, combination$constr.nl.str.val))), fixed=TRUE)
+  quant.base.names = setdiff(quant.names, quant.constr.names)
+
+  cat("\n##\n")
+  cat("## base quantities\n")
+  cat("##\n\n")
+  
+  quant.fmt = format(quant.base.names)
+  maxlen = max(nchar(quant.fmt)) + 1
+  items.per.row = floor((79-2)/maxlen)
+  for (i.first in seq(1, length(quant.fmt), by=items.per.row)) {
+    i.last = min(i.first + items.per.row - 1, length(quant.fmt) )
+    cat("  ", paste(quant.fmt[i.first:i.last], collapse=" "), "\n", sep="")
+  }
+  
+  cat("\n##\n")
+  cat("## quantities' definitions\n")
+  cat("##\n")
+  
   alucomb2.eol.first.time$reset()
   fields.descr.list = c("node", "descr", "texdescr")
   for (quant.name in quant.names) {
