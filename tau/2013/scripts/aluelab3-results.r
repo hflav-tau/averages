@@ -70,6 +70,7 @@ aluelab.results = function(args) {
     cat("  -s use error scale factors\n")
     cat("  -u use unitarity constraint to compute Be_univ, B_had_VA, B_had_s\n")
     cat("  -vadirect determine B_VA directly rather than from 1-Be-Bmu-Bstrange\n")
+    cat("  -kmaltman use delta_R from Kim Maltman, private communication, 2014\n")
     cat("  -lepuniv use R_had = (1 - (1+(f_mu/f_e))Be_univ)/Be_univ\n")
     args = args[args != "-s"]
     stop()
@@ -96,6 +97,12 @@ aluelab.results = function(args) {
     ##--- use R_had = (1 - (1+(f_mu/f_e))Be_univ)/Be_univ
     flag.lepuniv =  TRUE
     args = args[args != "-lepuniv"]
+  }
+  flag.kmaltman =  FALSE
+  if(any(args == "-kmaltman")) {
+    ##--- use delta_R from Kim Maltman, private communication, 2014
+    flag.kmaltman =  TRUE
+    args = args[args != "-kmaltman"]
   }
 
   if (length(args) > 0) {
@@ -359,64 +366,67 @@ aluelab.results = function(args) {
   quant$quant.add.single("VusbyVud_moulson_ckm14", 0.2308, 0.0001*6)
   quant$quant.expr.add("Vus_kl2_moulson_ckm14", VusbyVud_moulson_ckm14 * Vud_moulson_ckm14)
 
-  ##
-  ## SU3 breaking correction
-  ##
-
-  ##
-  ## POS(KAON)08, A.Pich, Theoretical progress on the Vus determination from tau decays
-  ##
-  ## deltaR.su3break.val = 0.216
-  ## deltaR.su3break.err = 0.016
-
-  ##
-  ## use deltaR_su3break from
-  ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
-  ##
-  ## deltaR.su3break.val = 0.240
-  ## deltaR.su3break.err = 0.032
-  ## quant$quant.add.single("deltaR_su3break", deltaR.su3break.val, deltaR.su3break.err)
-
-  ##
-  ## recompute deltaR_su3break using updated m_s
-  ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
-  ##
-  ## deltaR_su3break = deltaR_su3break_pheno + deltaR_su3break_d2pert * m_s(GeV)^2 + deltaR_su3break_remain
-  ## - m_s = 93.5 +- 2.5 (PDG13) strange quark mass in GeV in the MSbar scheme at a renormalisation scale of mu = 2 GeV
-  ## - deltaR_su3break_pheno = 0.1544 +- 0.0037 phenomenological scalar and pseudo-scalarcontributions
-  ## - deltaR_su3break_d2pert = 9.3 +- 3.4 rest of the perturbative D=2 contribution
-  ## - deltaR_su3break_remain = 0.0034 +- 0.0028 remaining contributions
-  ##
-
   ##--- s quark mass, PDG2011
   ## quant$quant.add.single("m_s", 100, sqrt((20.^2 + 30.^2)/2.))
   ##--- s quark mass, PDG2013 ---upd14
   quant$quant.add.single("m_s", 93.5, 2.5) ## changed14
+    
+  if (flag.kmaltman) {
+    ## 
+    ## K.Maltman, private comm. 2014
+    ## - use tau pi Kl2 poles
+    ## - FOPT 4 order
+    ## the following is just for the record, the value computed by K.Maltman is used for deltaR_su3break
+    ## 
+    quant$quant.add.single("deltaR_su3break_pheno", 0.1509, 0.0041) 
+    quant$quant.add.single("deltaR_su3break_d2pert", 11.36, 1.14)
+    quant$quant.add.single("deltaR_su3break_remain", 0.0084, 0.0185)
+    
+    ## 
+    ## K.Maltman, private comm. 2014
+    ## - use FOPT 3rd loop order as central value (favoured by Lattice)
+    ## - use FOPT uncertainty
+    ## - add FOPT-CIPT 3rd order discrepancy as additional theory uncertainty
+    ##
+    ## quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
+    quant$quant.add.single("deltaR_su3break", 0.254, 0.038)
+  } else {
+    ##
+    ## SU3 breaking correction
+    ##
+    
+    ##
+    ## POS(KAON)08, A.Pich, Theoretical progress on the Vus determination from tau decays
+    ##
+    ## deltaR.su3break.val = 0.216
+    ## deltaR.su3break.err = 0.016
+    
+    ##
+    ## use deltaR_su3break from
+    ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
+    ##
+    ## deltaR.su3break.val = 0.240
+    ## deltaR.su3break.err = 0.032
+    ## quant$quant.add.single("deltaR_su3break", deltaR.su3break.val, deltaR.su3break.err)
+    
+    ##
+    ## recompute deltaR_su3break using updated m_s
+    ## E. Gamiz et al., Nucl.Phys.Proc.Suppl.169:85-89,2007, arXiv:hep-ph/0612154v1
+    ##
+    ## deltaR_su3break = deltaR_su3break_pheno + deltaR_su3break_d2pert * m_s(GeV)^2 + deltaR_su3break_remain
+    ## - m_s = 93.5 +- 2.5 (PDG13) strange quark mass in GeV in the MSbar scheme at a renormalisation scale of mu = 2 GeV
+    ## - deltaR_su3break_pheno = 0.1544 +- 0.0037 phenomenological scalar and pseudo-scalarcontributions
+    ## - deltaR_su3break_d2pert = 9.3 +- 3.4 rest of the perturbative D=2 contribution
+    ## - deltaR_su3break_remain = 0.0034 +- 0.0028 remaining contributions
+    ##
+    
+    ##--- E.Gamiz, M.Jamin, A.Pich, J.Prades, F.Schwab, |V_us| and m_s from hadronic tau decays
+    quant$quant.add.single("deltaR_su3break_pheno", 0.1544, 0.0037)
+    quant$quant.add.single("deltaR_su3break_d2pert", 9.3, 3.4)
+    quant$quant.add.single("deltaR_su3break_remain", 0.0034, 0.0028)
 
-  ##--- E.Gamiz, M.Jamin, A.Pich, J.Prades, F.Schwab, |V_us| and m_s from hadronic tau decays
-  ## quant$quant.add.single("deltaR_su3break_pheno", 0.1544, 0.0037)
-  ## quant$quant.add.single("deltaR_su3break_d2pert", 9.3, 3.4)
-  ## quant$quant.add.single("deltaR_su3break_remain", 0.0034, 0.0028)
-
-  ## 
-  ## K.Maltman, private comm. 2014
-  ## - use tau pi Kl2 poles
-  ## - FOPT 4 order
-  ## the following is just for the record, the value computed by K.Maltman is used for deltaR_su3break
-  ## 
-  quant$quant.add.single("deltaR_su3break_pheno", 0.1509, 0.0041) 
-  quant$quant.add.single("deltaR_su3break_d2pert", 11.36, 1.14)
-  quant$quant.add.single("deltaR_su3break_remain", 0.0084, 0.0185)
-  
-  ## quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
-
-  ## 
-  ## K.Maltman, private comm. 2014
-  ## - use FOPT 3rd loop order as central value (favoured by Lattice)
-  ## - use FOPT uncertainty
-  ## - add FOPT-CIPT 3rd order discrepancy as additional theory uncertainty
-  ##
-  quant$quant.add.single("deltaR_su3break", 0.254, 0.038)
+    quant$quant.expr.add("deltaR_su3break", deltaR_su3break_pheno + deltaR_su3break_d2pert*(m_s/1000)^2 + deltaR_su3break_remain)
+  }
   
   if (no.unit.constr.flag) {
     ##
@@ -694,7 +704,7 @@ aluelab.results = function(args) {
     )
 
   ##--- show selection of quantities
-  print(rbind(cbind(val=quant$vals(display.names), err=quant$errs(display.names))))
+  print(round.data.frame(data.frame(val=quant$vals(display.names), err=quant$errs(display.names)), digits=6))
 
   ##--- translate quantity names to get a valid LaTeX command
   toTex = TrStr.num2tex$new()
@@ -815,6 +825,7 @@ aluelab.results = function(args) {
   if (flag.unitarity) fname = paste(fname, "-uniconstr", sep="")
   if (flag.vadirect) fname = paste(fname, "-vadirect", sep="")
   if (flag.lepuniv) fname = paste(fname, "-lepuniv", sep="")
+  if (flag.vadirect) fname = paste(fname, "-kmaltman", sep="")
   fname = paste(fname, "-elab.tex", sep="")
   cat(unlist(rc), sep="\n", file=fname)
   cat("produced file '", fname, "'\n", sep="")
