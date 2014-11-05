@@ -48,6 +48,17 @@ TrStr.num2tex = setRefClass("TrStr.num2tex", contains="TrStr",
   )
 
 ##
+## round data frame to print it in a reproductible way
+##
+round.data.frame <- function(x, digits = 0) {
+  x.names = rownames(x)
+  rc = data.frame(lapply(x, function(y) if(is.numeric(y)) round(y, digits) else y))
+  rownames(rc) = x.names
+  rc
+}
+  
+
+##
 ## return numeric id for sorting labels like "Gamma5", "Gamma3by5"
 ## <n>by<m> are sorted after <n> in ascending order ov <m>
 ##
