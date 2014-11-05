@@ -727,7 +727,8 @@ aluelab.results = function(args) {
     f_K="%.1f",
     delta_LD_taupi_pimu="%.2f",
     delta_LD_tauK_Kmu="%.2f",
-    delta_LD_tauK_taupi="%.2f"
+    delta_LD_tauK_taupi="%.2f",
+    Vus_err_th_perc="%.2f"
     )
   ##--- non-default multiplicative factor for selected quantities
   specialFactor = c(
@@ -825,7 +826,7 @@ aluelab.results = function(args) {
   if (flag.unitarity) fname = paste(fname, "-uniconstr", sep="")
   if (flag.vadirect) fname = paste(fname, "-vadirect", sep="")
   if (flag.lepuniv) fname = paste(fname, "-lepuniv", sep="")
-  if (flag.vadirect) fname = paste(fname, "-kmaltman", sep="")
+  if (flag.kmaltman) fname = paste(fname, "-kmaltman", sep="")
   fname = paste(fname, "-elab.tex", sep="")
   cat(unlist(rc), sep="\n", file=fname)
   cat("produced file '", fname, "'\n", sep="")
