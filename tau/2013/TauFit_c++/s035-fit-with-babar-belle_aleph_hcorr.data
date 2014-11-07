@@ -1,0 +1,413 @@
+# RESULTS FOR MEASUREMENTS
+# MEAS GAMMA    NODE    MEASVALUE    MEASERROR   EXPR   AUTHOR      YR   TITLE 
+# ---- ------- -------  -----------  ----------  ------ ----------- ---  --------------------------------------------------------------------------------------------------
+*    1 128     S035B20  2.90000E-04  1.4325E-04  ALEPH  BUSKULIC    97C  G(K- eta nu(tau)) / G(total)
+*    2 128     S035B20  2.60000E-04  7.071E-05   CLEO   BARTELT     96   G(K- eta nu(tau)) / G(total)
+*    3 19by13  S035B21  3.42000E-01  1.709E-02   CLEO   PROCARIO    93   G(h- 2pi0 nu(tau) (ex. K0)) / G(h- pi0 nu(tau))
+*    4 26by13  S035B22  4.40000E-02  5.831E-03   CLEO   PROCARIO    93   G(h- 3pi0 nu(tau)) / G(h- pi0 nu(tau))
+*    5 30      S035B23  1.12000e-03  5.09313e-04 ALEPH  SCHAEL      05C  G(h- 4pi0 nu(tau) (ex. K0, eta)) / G(total)
+*    6 76by54  S035B25  3.40000E-02  3.606E-03   CLEO   BORTOLETTO  93   G(h- h- h+ 2pi0 nu(tau) (ex. K0)) / G(h- h- h+ >=0 neutrals >=0 K(L)0 nu(tau))
+*    7 152by76 S035B27  8.10000E-01  8.485E-02   CLEO   BORTOLETTO  93   G(h- omega pi0 nu(tau)) / G(h- h- h+ 2pi0 nu(tau) (ex. K0))
+*    8 16      S035B29  4.71000E-03  6.332E-04   OPAL   ABBIENDI    04J  G(K- pi0 nu(tau)) / G(total)
+*    9 16      S035B29  4.44000E-03  3.538E-04   ALEPH  BARATE      99K  G(K- pi0 nu(tau)) / G(total)
+*   10 16      S035B29  5.10000E-03  1.221E-03   CLEO   BATTLE      94   G(K- pi0 nu(tau)) / G(total)
+*   11 23      S035B30  5.60000E-04  2.500E-04   ALEPH  BARATE      99K  G(K- 2pi0 nu(tau) (ex. K0)) / G(total)
+*   12 23      S035B30  9.00000E-04  1.044E-03   CLEO   BATTLE      94   G(K- 2pi0 nu(tau) (ex. K0)) / G(total)
+*   13 28      S035B31  3.70000E-04  2.371E-04   ALEPH  BARATE      99K  G(K- 3pi0 nu(tau) (ex. K0, eta)) / G(total)
+*   14 35      S035B32  9.33000E-03  8.382E-04   OPAL   ABBIENDI    00C  G(Kbar0 pi- nu(tau)) / G(total)
+*   15 35      S035B32  9.28000E-03  5.640E-04   ALEPH  BARATE      99K  G(Kbar0 pi- nu(tau)) / G(total)
+*   16 35      S035B32  9.50000E-03  1.616E-03   L3     ACCIARRI    95F  G(Kbar0 pi- nu(tau)) / G(total)
+*   17 40      S035B33  3.47000E-03  6.464E-04   ALEPH  BARATE      99K  G(Kbar0 pi- pi0 nu(tau)) / G(total)
+*   18 40      S035B33  2.94000E-03  8.184E-04   ALEPH  BARATE      98E  G(Kbar0 pi- pi0 nu(tau)) / G(total)
+*   19 40      S035B33  4.10000E-03  1.237E-03   L3     ACCIARRI    95F  G(Kbar0 pi- pi0 nu(tau)) / G(total)
+*   20 42      S035B34  1.43000E-03  2.915E-04   ALEPH  BARATE      99K  G(K- pi0 K0 nu(tau)) / G(total)
+*   21 42      S035B34  1.52000E-03  7.885E-04   ALEPH  BARATE      98E  G(K- pi0 K0 nu(tau)) / G(total)
+*   22 42      S035B34  1.45000E-03  4.118E-04   CLEO   COAN        96   G(K- pi0 K0 nu(tau)) / G(total)
+*   23 92      S035B37  1.59000E-03  5.665E-04   OPAL   ABBIENDI    00D  G(pi- K- K+ >=0 neutrals nu(tau)) / G(total)
+*   24 92      S035B37  1.50000E-03  8.5515E-04  TPC    BAUER       94   G(pi- K- K+ >=0 neutrals nu(tau)) / G(total)
+*   25 33      S035B43  9.70000E-03  8.490E-04   ALEPH  BARATE      98E  G(K(S)0 (particles)- nu(tau)) / G(total)
+*   26 33      S035B43  9.70000E-03  1.082E-03   OPAL   AKERS       94G  G(K(S)0 (particles)- nu(tau)) / G(total)
+*   27 66      S035B53  4.54500E-02  1.478E-03   DELPHI ABDALLAH    06A  G(h- h- h+ pi0 nu(tau) (ex. K0)) / G(total)
+*   28 66      S035B53  4.23000E-02  2.280E-03   CLEO   BALEST      95C  G(h- h- h+ pi0 nu(tau) (ex. K0)) / G(total)
+*   29 19      S035R20  9.29500e-02  1.21655e-03 ALEPH  SCHAEL      05C  G(h- 2pi0 nu(tau) (ex. K0)) / G(total)
+*   30 26      S035R21  1.08200e-02  9.25581e-04 ALEPH  SCHAEL      05C  G(h- 3pi0 nu(tau) / G(total)
+*   31 78      S035B57  2.20000E-04  5.000E-05   CLEO   ANASTASSOV  01   G(h- h- h+ 3pi0 nu(tau)) / G(total)
+*   32 152     S035B58  4.30000E-03  7.810E-04   ALEPH  BUSKULIC    97C  G(h- pi0 omega nu(tau)) / G(total)
+*   33 76      S035B59  4.35000E-03  4.60977e-04 ALEPH  SCHAEL      05C  G(h- h- h+ 2pi0 nu(tau) (ex. K0)) / G(total)
+*   34 57      S035B62  9.31700E-02  1.218E-03   DELPHI ABDALLAH    06A  G(h- h- h+ nu(tau) (ex. K0)) / G(total)
+*   35 57      S035B62  9.51000E-02  2.119E-03   CLEO   BALEST      95C  G(h- h- h+ nu(tau) (ex. K0)) / G(total)
+*   36 55      S035B63  1.45560E-01  1.296E-03   L3     ACHARD      01D  G(h- h- h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``3-prong'')) / G(total)
+*   37 55      S035B63  1.49600E-01  2.377E-03   OPAL   AKERS       95Y  G(h- h- h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``3-prong'')) / G(total)
+*   38 57by55  S035B64  6.60000E-01  1.456E-02   OPAL   AKERS       95Y  G(h- h- h+ nu(tau) (ex. K0)) / G(h- h- h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``3-prong''))
+*   39 34      S035B67  8.55000E-03  8.139E-04   CLEO   COAN        96   G(Kbar0 h- nu(tau)) / G(total)
+*   40 39      S035B68  5.62000E-03  6.931E-04   CLEO   COAN        96   G(Kbar0 h- pi0 nu(tau)) / G(total)
+*   41 47      S035B69  2.60000E-04  1.118E-04   ALEPH  BARATE      98E  G(pi- K(S)0 K(S)0 nu(tau)) / G(total)
+*   42 47      S035B69  2.30000E-04  5.831E-05   CLEO   COAN        96   G(pi- K(S)0 K(S)0 nu(tau)) / G(total)
+*   43 8       S035B73  1.15710E-01  1.655E-03   DELPHI ABDALLAH    06A  G(h- nu(tau)) / G(total)
+*   44 8       S035B73  1.19800E-01  2.062E-03   OPAL   ACKERSTAFF  98M  G(h- nu(tau)) / G(total)
+*   45 8       S035B73  1.15200E-01  1.300E-03   CLEO   ANASTASSOV  97   G(h- nu(tau)) / G(total)
+*   46 29      S035B79  1.60000E-03  7.071E-04   CLEO   PROCARIO    93   G(h- 4pi0 nu(tau) (ex. K0)) / G(total)
+*   47 25      S035C02  1.40300E-02  3.098E-03   DELPHI ABDALLAH    06A  G(h- >= 3pi0 nu(tau) (ex. K0)) / G(total)
+*   48 74      S035C03  5.61000E-03  1.168E-03   DELPHI ABDALLAH    06A  G(h- h- h+ >= 2pi0 nu(tau) (ex. K0)) / G(total)
+*   49 48      S035C1   1.01000E-03  2.642E-04   ALEPH  BARATE      98E  G(pi- K(S)0 K(L)0 nu(tau)) / G(total)
+*   50 60      S035C19  9.13000E-02  4.627E-03   CLEO3  BRIERE      03   G(pi- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*   51 58      S035B71  9.46900E-02  9.57758E-04 ALEPH  SCHAEL      05C  G(h- h- h+ nu(tau) (ex. K0, omega)) / G(total)
+*   52 85      S035C21  4.15000E-03  6.640E-04   OPAL   ABBIENDI    04J  G(K- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*   53 85      S035C21  3.84000E-03  4.050E-04   CLEO3  BRIERE      03   G(K- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*   54 85      S035C21  2.14000E-03  4.701E-04   ALEPH  BARATE      98   G(K- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*   55 66      S035B53  4.73400E-02  7.66942E-04 ALEPH  SCHAEL      05C  G(h- h- h+ pi0 nu(tau) (ex. K0)) / G(total)
+*   56 69      S035C23  4.19000E-02  2.326E-03   CLEO   EDWARDS     00A  G(pi- pi- pi+ pi0 nu(tau) (ex. K0)) / G(total)
+*   57 88      S035C25  7.40000E-04  1.360E-04   CLEO3  ARMS        05   G(K- pi- pi+ pi0 nu(tau) (ex. K0)) / G(total)
+*   58 88      S035C25  6.10000E-04  4.295E-04   ALEPH  BARATE      98   G(K- pi- pi+ pi0 nu(tau) (ex. K0)) / G(total)
+*   59 80by60  S035C32  5.44000E-02  5.701E-03   CLEO   RICHICHI    99   G(K- pi- h+ nu(tau) (ex. K0)) / G(pi- pi- pi+ nu(tau) (ex. K0))
+*   60 81by69  S035C34  2.61000E-02  6.155E-03   CLEO   RICHICHI    99   G(K- pi- h+ pi0 nu(tau) (ex. K0)) / G(pi- pi- pi+ pi0 nu(tau) (ex. K0))
+*   61 93by60  S035C35  1.60000E-02  3.354E-03   CLEO   RICHICHI    99   G(pi- K- K+ nu(tau)) / G(pi- pi- pi+ nu(tau) (ex. K0))
+*   62 94by69  S035C36  7.90000E-03  4.682E-03   CLEO   RICHICHI    99   G(pi- K- K+ pi0 nu(tau)) / G(pi- pi- pi+ pi0 nu(tau) (ex. K0))
+*   63 38      S035C38  3.30000E-03  6.742E-04   OPAL   ABBIENDI    00C  G(K- K0 >=0 pi0 nu(tau)) / G(total)
+*   64 94      S035C8   5.50000E-05  1.844E-05   CLEO3  ARMS        05   G(pi- K- K+ pi0 nu(tau)) / G(total)
+*   65 94      S035C8   7.50000E-04  3.265E-04   ALEPH  BARATE      98   G(pi- K- K+ pi0 nu(tau)) / G(total)
+*   66 3       S035R1   1.73190E-01  7.69675E-04 ALEPH  SCHAEL      05C  G(mu- nubar(mu) nu(tau)) / G(total)
+*   67 3       S035R1   1.73400E-01  1.082E-03   OPAL   ABBIENDI    03   G(mu- nubar(mu) nu(tau)) / G(total)
+*   68 3       S035R1   1.73420E-01  1.288E-03   L3     ACCIARRI    01F  G(mu- nubar(mu) nu(tau)) / G(total)
+*   69 3       S035R1   1.73250E-01  1.223E-03   DELPHI ABREU       99X  G(mu- nubar(mu) nu(tau)) / G(total)
+*   70 150by66 S035R14  4.31000E-01  3.300E-02   ALEPH  BUSKULIC    96   G(h- omega nu(tau)) / G(h- h- h+ pi0 nu(tau) (ex. K0))
+*   71 150by66 S035R14  4.64000E-01  2.335E-02   CLEO   BALEST      95C  G(h- omega nu(tau)) / G(h- h- h+ pi0 nu(tau) (ex. K0))
+*   72 5       S035R2   1.78370E-01  8.04984e-04 ALEPH  SCHAEL      05C  G(e- nubar(e) nu(tau)) / G(total)
+*   73 5       S035R2   1.78060E-01  1.288E-03   L3     ACCIARRI    01F  G(e- nubar(e) nu(tau)) / G(total)
+*   74 5       S035R2   1.78100E-01  1.082E-03   OPAL   ABBIENDI    99H  G(e- nubar(e) nu(tau)) / G(total)
+*   75 5       S035R2   1.78770E-01  1.549E-03   DELPHI ABREU       99X  G(e- nubar(e) nu(tau)) / G(total)
+*   76 5       S035R2   1.77600E-01  1.803E-03   CLEO   ANASTASSOV  97   G(e- nubar(e) nu(tau)) / G(total)
+*   77 19      S035R20  9.49800E-02  4.219E-03   DELPHI ABDALLAH    06A  G(h- 2pi0 nu(tau) (ex. K0)) / G(total)
+*   78 19      S035R20  8.88000E-02  5.597E-03   L3     ACCIARRI    95   G(h- 2pi0 nu(tau) (ex. K0)) / G(total)
+*   79 26      S035R21  1.70000E-02  4.494E-03   L3     ACCIARRI    95   G(h- 3pi0 nu(tau)) / G(total)
+*   80 150     S035R23  1.91000E-02  9.220E-04   ALEPH  BUSKULIC    97C  G(h- omega nu(tau)) / G(total)
+*   81 150     S035R23  1.60000E-02  4.909E-03   CLEO   BARINGER    87   G(h- omega nu(tau)) / G(total)
+*   82 31      S035R26  1.52800E-02  5.587E-04   OPAL   ABBIENDI    01J  G(K- >=0 pi0 >=0 K0 >=0 gamma nu(tau)) / G(total)
+*   83 31      S035R26  1.54000E-02  2.400E-03   DELPHI ABREU       94K  G(K- >=0 pi0 >=0 K0 >=0 gamma nu(tau)) / G(total)
+*   84 31      S035R26  1.70000E-02  2.247E-03   CLEO   BATTLE      94   G(K- >=0 pi0 >=0 K0 >=0 gamma nu(tau)) / G(total)
+*   85 54      S035R31  1.44000E-01  6.708E-03   L3     ADEVA       91F  G(h- h- h+ >=0 neutrals >=0 K(L)0 nu(tau)) / G(total)
+*   86 54      S035R31  1.50000E-01  5.000E-03   CELLO  BEHREND     89B  G(h- h- h+ >=0 neutrals >=0 K(L)0 nu(tau)) / G(total)
+*   87 54      S035R31  1.51000E-01  1.000E-02   TPC    AIHARA      87B  G(h- h- h+ >=0 neutrals >=0 K(L)0 nu(tau)) / G(total)
+*   88 126     S035R32  1.80000E-03  4.472E-04   ALEPH  BUSKULIC    97C  G(pi- pi0 eta nu(tau)) / G(total)
+*   89 126     S035R32  1.70000E-03  2.828E-04   CLEO   ARTUSO      92   G(pi- pi0 eta nu(tau)) / G(total)
+*   90 102     S035R33  1.70000E-03  3.406E-04   L3     ACHARD      01D  G(3h- 2h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``5-prong'')) / G(total)
+*   91 102     S035R33  9.70000E-04  1.208E-04   CLEO   GIBAUT      94B  G(3h- 2h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``5-prong'')) / G(total)
+*   92 102     S035R33  1.02000E-03  2.900E-04   HRS    BYLSMA      87   G(3h- 2h+ >=0 neutrals nu(tau) (ex. K(S)0 --> pi- pi+) (``5-prong'')) / G(total)
+*   93 103     S035R38  9.70000E-04  1.581E-04   DELPHI ABDALLAH    06A  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   94 103     S035R38  7.20000E-04  1.500E-04   ALEPH  SCHAEL      05C  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   95 103     S035R38  9.10000E-04  1.523E-04   OPAL   ACKERSTAFF  99E  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   96 103     S035R38  7.70000E-04  1.030E-04   CLEO   GIBAUT      94B  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   97 103     S035R38  6.40000E-04  2.508E-04   ARGUS  ALBRECHT    88B  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   98 103     S035R38  5.10000E-04  2.000E-04   HRS    BYLSMA      87   G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*   99 104     S035R39  1.60000E-04  1.342E-04   DELPHI ABDALLAH    06A  G(3h- 2h+ pi0 nu(tau) (ex. K0)) / G(total)
+*  100 104     S035R39  2.10000E-04  9.21954e-05 ALEPH  SCHAEL      05C  G(3h- 2h+ pi0 nu(tau) (ex. K0)) / G(total)
+*  101 104     S035R39  1.70000E-04  2.828E-05   CLEO   ANASTASSOV  01   G(3h- 2h+ pi0 nu(tau) (ex. K0)) / G(total)
+*  102 104     S035R39  2.70000E-04  2.012E-04   OPAL   ACKERSTAFF  99E  G(3h- 2h+ pi0 nu(tau) (ex. K0)) / G(total)
+*  103 93      S035R40  1.55000E-03  1.082E-04   CLEO3  BRIERE      03   G(pi- K- K+ nu(tau)) / G(total)
+*  104 93      S035R40  1.63000E-03  2.702E-04   ALEPH  BARATE      98   G(pi- K- K+ nu(tau)) / G(total)
+*  105 82      S035R41  5.80000E-03  1.845E-03   TPC    BAUER       94   G(K- pi- pi+ >=0 neutrals nu(tau)) / G(total)
+*  106 7       S035R43  1.24700E-01  5.025E-03   L3     ACCIARRI    95   G(h- >=0 K(L)0 nu(tau)) / G(total)
+*  107 7       S035R43  1.24000E-01  9.899E-03   DELPHI ABREU       92N  G(h- >=0 K(L)0 nu(tau)) / G(total)
+*  108 7       S035R43  1.21000E-01  8.602E-03   OPAL   ALEXANDER   91D  G(h- >=0 K(L)0 nu(tau)) / G(total)
+*  109 17      S035R44  9.91000E-02  4.111E-03   OPAL   ACKERSTAFF  98M  G(h- >=2 pi0 nu(tau)) / G(total)
+*  110 37      S035R46  1.62000E-03  2.371E-04   ALEPH  BARATE      99K  G(K- K0 nu(tau)) / G(total)
+*  111 37      S035R46  1.58000E-03  4.531E-04   ALEPH  BARATE      98E  G(K- K0 nu(tau)) / G(total)
+*  112 37      S035R46  1.51000E-03  3.041E-04   CLEO   COAN        96   G(K- K0 nu(tau)) / G(total)
+*  113 3by5    S035R5   9.77700E-01  1.074E-02   CLEO   ANASTASSOV  97   G(mu- nubar(mu) nu(tau)) / G(e- nubar(e) nu(tau))
+*  114 3by5    S035R5   9.97000E-01  5.315E-02   ARGUS  ALBRECHT    92D  G(mu- nubar(mu) nu(tau)) / G(e- nubar(e) nu(tau))
+*  115 8       S035B73  1.15240E-01  1.04805E-03 ALEPH  SCHAEL      05C  G(h- nu(tau)) / G(total)
+*  116 10      S035R7   6.58000E-03  3.962E-04   OPAL   ABBIENDI    01J  G(K- nu(tau)) / G(total)
+*  117 10      S035R7   6.96000E-03  2.865E-04   ALEPH  BARATE      99K  G(K- nu(tau)) / G(total)
+*  118 10      S035R7   8.50000E-03  1.800E-03   DELPHI ABREU       94K  G(K- nu(tau)) / G(total)
+*  119 10      S035R7   6.60000E-03  1.140E-03   CLEO   BATTLE      94   G(K- nu(tau)) / G(total)
+*  120 13      S035R84  2.59240E-01  1.28973E-03 ALEPH  SCHAEL      05C  G(h- pi0 nu(tau)) / G(total)
+*  121 13      S035R84  2.57400E-01  2.438E-03   DELPHI ABDALLAH    06A  G(h- pi0 nu(tau)) / G(total)
+*  122 13      S035R84  2.58900E-01  3.362E-03   OPAL   ACKERSTAFF  98M  G(h- pi0 nu(tau)) / G(total)
+*  123 13      S035R84  2.50500E-01  6.103E-03   L3     ACCIARRI    95   G(h- pi0 nu(tau)) / G(total)
+*  124 13      S035R84  2.58700E-01  4.368E-03   CLEO   ARTUSO      94   G(h- pi0 nu(tau)) / G(total)
+*  125 130     S035C27  1.77E-04     9.04268E-05 CLEO   BISHAI      99   G(K- pi0 eta nu(tau)) / G(total)
+*  126 132     S035C28  2.20E-04     7.33757E-05 CLEO   BISHAI      99   G(Kbar0 pi- eta nu(tau)) / G(total)
+*  127 43      S035C37  3.24E-03     9.91564E-04 OPAL   ABBIENDI    00C  G(Kbar0 pi- >=1 pi0 nu(tau)) / G(total)
+*  128 44      S035B98  2.6E-04      2.4E-04     ALEPH  BARATE      99R  G(Kbar0 pi- 2pi0 nu(tau)) / G(total)
+*  129 53      S035C5   2.3E-04      2.02485E-04 ALEPH  BARATE      98E  G(Kbar0 h- h- h+ nu(tau)) / G(total)
+*  130 151     S035C61  4.1E-04      9.21954E-05 CLEO3  ARMS        05   G(K- omega nu(tau)) / G(total)
+*  131 136     S035B89  2.3E-04      5.0e-05     CLEO   ANASTASSOV  01   G(pi- pi- pi+ eta nu(tau) (ex. K0)) / G(total)
+*  132 46      S035B51  0.153E-02    0.034E-02   ALEPH  BARATE      98E  G(pi- K0 Kbar0 nu(tau)) / G(total)
+*  133 49      S035C44  0.31E-03     0.23E-03    ALEPH  BARATE      99R  G(pi- pi0 K0 Kbar0 nu(tau)) / G(total)
+*  134 805     S035Z06  0.04E-02     0.02E-02    ALEPH  SCHAEL      05C  G(a1- (-> pi- gamma) nu(tau)) / G(total)
+*  135 3by5    S035R5  0.979145828 3.917873e-03  BABAR  AUBERT      10P  G(mu- nubar(mu) nu(tau)) / G(e- nubar(e) nu(tau))
+*  136 9by5    S035Y01 0.593673115 6.213344e-03  BABAR  AUBERT      10P  G(pi- nu(tau)) / G(e- nubar(e) nu(tau))
+*  137 10by5   S035Y02 0.038676015 6.404611e-04  BABAR  AUBERT      10P  G(K- nu(tau)) / G(e- nubar(e) nu(tau))
+*  138 16      S035B29 0.004160000 1.824828e-04  BABAR  AUBERT      07AP G(K- pi0 nu(tau)) / G(total)
+*  139 35      S035B32 0.008101076 2.564702e-04  BABAR  AUBERT      08I  G(Kbar0 pi- nu(tau)) / G(total)
+*  140 40      S035B33 0.003420000 1.615552e-04  BABAR  AUBERT      09D  G(Kbar0 pi- pi0 nu(tau)) / G(total)
+*  141 60      S035C19 0.088337000 1.269400e-03  BABAR  AUBERT      08   G(pi- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*  142 85      S035C21 0.002725700 9.417643e-05  BABAR  AUBERT      08   G(K- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*  143 93      S035R40 0.001346100 3.776148e-05  BABAR  AUBERT      08   G(pi- K- K+ nu(tau)) / G(total)
+*  144 103     S035R38 0.000828108 3.777961e-05  BABAR  AUBERT      05W  G(3h- 2h+ nu(tau) (ex. K0)) / G(total)
+*  145 96      S035C9  0.000015777 1.790238e-06  BABAR  AUBERT      08   G(K- K- K+ nu(tau)) / G(total)
+*  146 136     S035B89 0.000160000 1.208307e-05  BABAR  AUBERT      08AE G(pi- pi- pi+ eta nu(tau) (ex. K0)) / G(total)
+*  147 128     S035B20 0.000142000 1.303840e-05  BABAR  SANCHEZ     11   G(K- eta nu(tau)) / G(total)
+*  148 13      S035R84 0.256700000 3.901282e-03  BELLE  FUJIKAWA    08   G(h- pi0 nu(tau)) / G(total)
+*  149 35      S035B32 0.007967130 2.683923e-04  BELLE  EPIFANOV    07   G(Kbar0 pi- nu(tau)) / G(total)
+*  150 60      S035C19 0.084200000 2.588056e-03  BELLE  LEE         10   G(pi- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*  151 85      S035C21 0.003300000 1.667386e-04  BELLE  LEE         10   G(K- pi- pi+ nu(tau) (ex. K0)) / G(total)
+*  152 93      S035R40 0.001550000 5.596652e-05  BELLE  LEE         10   G(pi- K- K+ nu(tau)) / G(total)
+*  153 126     S035R32 0.001350000 7.615770e-05  BELLE  INAMI       09   G(pi- pi0 eta nu(tau)) / G(total)
+*  154 128     S035B20 0.000158000 1.029563e-05  BELLE  INAMI       09   G(K- eta nu(tau)) / G(total)
+*  155 130     S035C27 0.000046000 1.170470e-05  BELLE  INAMI       09   G(K- pi0 eta nu(tau)) / G(total)
+*  156 132     S035C28 0.000088000 1.523155e-05  BELLE  INAMI       09   G(Kbar0 pi- eta nu(tau)) / G(total)
+*  157 96      S035C9  0.000032900 2.592279e-06  BELLE  LEE         10   G(K- K- K+ nu(tau)) / G(total)
+#
+# INPUT CORRELATIONS BETWEEN MEASUREMENTS (PERCENT)
+#
+# INDEX   1
+%     5   29  19.504
+%     5   30 -47.493
+%     5   33  12.669
+%     5   51  -8.273
+%     5   55  13.810
+%     5   66  -3.714
+%     5   72  -2.459
+%     5   94  -5.725
+%     5  100  -3.891
+%     5  115 -24.392
+%     5  120 -14.946
+%    29   30 -27.450
+%    29   33   3.994
+%    29   51 -17.255
+%    29   55   3.766
+%    29   66  -5.298
+%    29   72  -5.235
+%    29   94  -7.937
+%    29  100   2.985
+%    29  115 -16.535
+%    29  120 -37.458
+%    30   33   9.810
+%    30   51 -13.705
+%    30   55  -2.590
+%    30   66  -3.648
+%    30   72   0.177
+%    30   94  -3.544
+%    30  100   2.254
+%    30  115 -14.789
+%    30  120   2.035
+%    33   51  -5.889
+%    33   55 -20.589
+%    33   66  -1.894
+%    33   72   0.049
+%    33   94  -4.295
+%    33  100   4.447
+%    33  115 -23.472
+%    33  120 -13.989
+%    51   55 -17.895
+%    51   66  -8.784
+%    51   72 -14.480
+%    51   94   8.812
+%    51  100  -2.976
+%    51  115  14.098
+%    51  120  -4.853
+%    55   66 -11.273
+%    55   72 -13.167
+%    55   94  -4.501
+%    55  100  -1.584
+%    55  115 -22.103
+%    55  120 -26.209
+%    66   72 -20.244
+%    66   94   0.998
+%    66  100  -3.844
+%    66  115  -6.350
+%    66  120 -11.898
+%    72   94   0.000
+%    72  100   0.679
+%    72  115  -9.294
+%    72  120 -16.228
+%    94  100 -24.470
+%    94  115   9.126
+%    94  120   3.995
+%   100  115  -3.345
+%   100  120  -4.858
+%   115  120   2.086
+# INDEX   2
+%  27  34 -53.0
+%  27  43  -2.0
+%  27  47   3.0
+%  27  48 -78.0
+%  27  77  -3.0
+%  27  93  -3.0
+%  27  99   0.0
+%  27 121  -1.0
+%  34  43  -7.0
+%  34  47  -2.0
+%  34  48  26.0
+%  34  77   0.0
+%  34  93  -2.0
+%  34  99   1.0
+%  34 121  -8.0
+%  43  47  -6.0
+%  43  48  -1.0
+%  43  77   6.0
+%  43  93  -1.0
+%  43  99   0.0
+%  43 121 -34.0
+%  47  48  -6.0
+%  47  77 -86.0
+%  47  93   0.0
+%  47  99   0.0
+%  47 121  38.0
+%  48  77   3.0
+%  48  93   3.0
+%  48  99   5.0
+%  48 121  -1.0
+%  77  93   0.0
+%  77  99   0.0
+%  77 121 -66.0 
+%  93  99 -57.0
+%  93 121  -1.0
+%  99 121   0.0
+# INDEX   3
+%  36  90 -19.0
+# INDEX   4
+%  45  76  48.0
+%  45 113   7.0
+%  76 113 -42.0
+# INDEX   5
+%  50  53  47.0
+%  50 103  71.0
+%  53 103  34.0
+# INDEX   6
+%  68  73   7.8
+# INDEX   7
+%  82 116  60.0
+# INDEX   8
+%  135  136        24.0480847757
+%  135  137        10.1645629790
+%  135  138         1.0715875109
+%  135  139         1.3039849498
+%  135  140         0.7704521318
+%  135  141         3.1319511976
+%  135  142         1.3025868507
+%  135  143         1.6043503445
+%  135  144         0.5551888804
+%  135  145         0.3966290062
+%  135  146         0.5959549574
+%  135  147         0.4621239520
+%  136  137        31.4572553050
+%  136  138         7.9963236441
+%  136  139         9.0235310020
+%  136  140         5.7492127665
+%  136  141        23.3710221141
+%  136  142         9.7200703883
+%  136  143        11.9718683388
+%  136  144         4.1428907360
+%  136  145         2.9596965883
+%  136  146         4.4470924384
+%  136  147         3.4484282868
+%  137  138         2.5977181572
+%  137  139         3.1068051600
+%  137  140         1.8677125961
+%  137  141         7.5924051101
+%  137  142         3.1577015214
+%  137  143         3.8892297439
+%  137  144         1.3458763010
+%  137  145         0.9614990475
+%  137  146         1.4447005009
+%  137  147         1.1202704109
+%  138  139         6.0241506055
+%  138  140         3.8936661211
+%  138  141        14.8963932759
+%  138  142         6.1954496670
+%  138  143         7.6307171399
+%  138  144         2.9188292739
+%  138  145         1.8864730922
+%  138  146         2.8345203549
+%  138  147         2.2111897117
+%  138  153         0.3758151728
+%  138  154         0.3253557626
+%  138  155         0.0833205222
+%  138  156         0.1224878467
+%  139  140         4.7587571756
+%  139  141        17.6357017139
+%  139  142         7.3347353474
+%  139  143         9.0339351848
+%  139  144         3.6365380730
+%  139  145         2.2333779815
+%  139  146         3.3557623349
+%  139  147         2.6263965945
+%  139  149        28.1528205178
+%  139  153         0.6893810457
+%  139  154         0.5968202247
+%  139  155         0.1528399940
+%  139  156         0.2246870429
+%  140  141        11.3987080973
+%  140  142         4.7407530788
+%  140  143         5.8390185892
+%  140  144         2.3504500502
+%  140  145         1.4435276858
+%  140  146         2.1689726850
+%  140  147         1.6975524203
+%  140  153         0.4455764469
+%  140  154         0.3857504305
+%  140  155         0.0987870234
+%  140  156         0.1452248432
+%  141  142        54.3986322561
+%  141  143        39.1814558481
+%  141  144         8.5478855825
+%  141  145         3.1926249910
+%  141  146         8.2933345351
+%  141  147         6.4699467741
+%  141  153         1.1102136375
+%  141  154         0.9611490723
+%  141  155         0.2461411533
+%  141  156         0.3618472262
+%  142  143        17.8882131727
+%  142  144         3.5550883966
+%  142  145         9.4572787237
+%  142  146         3.4492199375
+%  142  147         2.6908681078
+%  142  153         0.4617408109
+%  142  154         0.3997444609
+%  142  155         0.1023707617
+%  142  156         0.1504932258
+%  143  144         4.3786771614
+%  143  145         9.0126720951
+%  143  146         4.2482827092
+%  143  147         3.3142474711
+%  143  153         0.5687098934
+%  143  154         0.4923511728
+%  143  155         0.1260864615
+%  143  156         0.1853572056
+%  144  145         1.0825006999
+%  144  146         1.6265115472
+%  144  147         1.2755241338
+%  144  153         0.4061519645
+%  144  154         0.3516193376
+%  144  155         0.0900463745
+%  144  156         0.1323753887
+%  145  146         1.0502644604
+%  145  147         0.8193513874
+%  145  153         0.1405969965
+%  145  154         0.1217195216
+%  145  155         0.0311712140
+%  145  156         0.0458241833
+%  146  147         1.2311165184
+%  146  153         0.2112540328
+%  146  154         0.1828896807
+%  146  155         0.0468363111
+%  146  156         0.0688531317
+%  147  153         0.1737506071
+%  147  154         0.1504217109
+%  147  155         0.0385215722
+%  147  156         0.0566297991
+%  150  151        17.4994437788
+%  150  152         4.9482416746
+%  150  157        -5.3460022468
+%  151  152         8.0260853465
+%  151  157         3.5050738222
+%  152  157        -0.8312818559
+%  153  154         5.5767082778
+%  153  155         1.4281420509
+%  153  156         2.0994832955
+%  154  155         1.2363903315
+%  154  156         1.8175928970
+%  155  156         0.4654682867

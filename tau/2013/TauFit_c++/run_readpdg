@@ -1,0 +1,18 @@
+#!/bin/sh
+
+rm -f *.log 
+rm -f *.info 
+rm -f *.results 
+rm -f alucomb_*input 
+rm -f combos_*input
+
+rm -f all_node_def.txt
+rm -f base_node_def.txt
+rm -f derived_node_def.txt
+
+
+#./readpdg 0 0 | tee readpdg_unconstrained.log
+./readpdg 0 1 | tee readpdg_unconstrained_aleph_hcorr.log
+#./readpdg 1 0 | tee readpdg_constrained.log
+# ./readpdg 1 1 | tee readpdg_constrained_aleph_hcorr.log
+
