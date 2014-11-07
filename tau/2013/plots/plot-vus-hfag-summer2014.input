@@ -8,12 +8,11 @@
 # p       - PDG average, sets band
 # h       - other averages
 #  
-#i   0.2130 0.2280    6.4    |V_{us}|
-i   0 0              6.4    |V_{us}|
+i   0      0       6.4  |V_{us}|
 h   0.2253 0.0014 -1 -1 K_{l3} decays, PDG 2013
 h   0.2253 0.0010 -1 -1 K_{l2} decays, PDG 2013
 p   0.2255 0.0010 -1 -1 CKM unitarity, PDG 2013
-mt  0.2232 0.0019 0.0000 #tau #rightarrow K#nu / #tau #rightarrow #pi#nu, HFAG 2014
-mt  0.2211 0.0020 0.0000 #tau #rightarrow K#nu, HFAG 2014
 mt  0.2176 0.0021 0.0000 #tau #rightarrow s inclusive, HFAG 2014
-mt  0.2203 0.0014 0.0000 #tau average, HFAG 2014
+mt  0.2232 0.0019 0.0000 #tau #rightarrow K#nu / #tau #rightarrow #pi#nu, HFAG 2014
+mt  0.2212 0.0020 0.0000 #tau #rightarrow K#nu, HFAG 2014
+mt  0.2204 0.0014 0.0000 #tau average, HFAG 2014
