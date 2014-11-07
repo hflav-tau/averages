@@ -234,7 +234,7 @@ END
 
 #
 # Gamma35 (PDG node = S035B32)
-# G(Kbar0 pi- nu(tau)) / G(total)
+# G(pi- Kbar0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT ALEPH Gamma35 pub BARATE 99K
 
@@ -286,7 +286,7 @@ END
 
 #
 # Gamma40 (PDG node = S035B33)
-# G(Kbar0 pi- pi0 nu(tau)) / G(total)
+# G(pi- Kbar0 pi0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT ALEPH Gamma40 pub BARATE 98E
 
@@ -296,7 +296,7 @@ END
 
 #
 # Gamma40 (PDG node = S035B33)
-# G(Kbar0 pi- pi0 nu(tau)) / G(total)
+# G(pi- Kbar0 pi0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT ALEPH Gamma40 pub BARATE 99K
 
@@ -326,7 +326,7 @@ END
 
 #
 # Gamma44 (PDG node = S035B98)
-# G(Kbar0 pi- 2pi0 nu(tau)) / G(total)
+# G(pi- Kbar0 2pi0 nu(tau) (ex. K0)) / G(total)
 #
 BEGIN MEASUREMENT ALEPH Gamma44 pub BARATE 99R
 

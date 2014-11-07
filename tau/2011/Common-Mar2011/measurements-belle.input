@@ -51,7 +51,7 @@ END
 
 #
 # Gamma132 (PDG node = S035C28)
-# G(Kbar0 pi- eta nu(tau)) / G(total)
+# G(pi- Kbar0 eta nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT Belle Gamma132 pub INAMI 09
 
@@ -81,7 +81,7 @@ END
 
 #
 # Gamma35 (PDG node = S035B32)
-# G(Kbar0 pi- nu(tau)) / G(total)
+# G(pi- Kbar0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT Belle Gamma35 pub EPIFANOV 07
 

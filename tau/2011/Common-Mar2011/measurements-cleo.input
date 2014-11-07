@@ -129,7 +129,7 @@ END
 
 #
 # Gamma132 (PDG node = S035C28)
-# G(Kbar0 pi- eta nu(tau)) / G(total)
+# G(pi- Kbar0 eta nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT CLEO Gamma132 pub BISHAI 99
 

@@ -84,7 +84,7 @@ END
 
 #
 # Gamma35 (PDG node = S035B32)
-# G(Kbar0 pi- nu(tau)) / G(total)
+# G(pi- Kbar0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT OPAL Gamma35 pub ABBIENDI 00C
 
@@ -114,7 +114,7 @@ END
 
 #
 # Gamma43 (PDG node = S035C37)
-# G(Kbar0 pi- >=1 pi0 nu(tau)) / G(total)
+# G(pi- Kbar0 >=1 pi0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT OPAL Gamma43 pub ABBIENDI 00C
 

@@ -212,7 +212,7 @@ NLCONSTRAINT Gamma104.c 0 "-Gamma104 + (Gamma930 + Gamma833 + Gamma831*BR_om_pim
 #
 # Gamma810 = G(2pi- pi+ 3pi0 nu(tau) (ex. K0)) / G(total)
 # Gamma50 = G(pi- K(S)0 K(S)0 pi0 nu(tau)) / G(total)
-# Gamma132 = G(Kbar0 pi- eta nu(tau)) / G(total)
+# Gamma132 = G(pi- Kbar0 eta nu(tau)) / G(total)
 #
 # we assume that modes with K are negligible (no measurement exists)
 # KS(pi+pi-) pi- 3pi0
@@ -251,13 +251,13 @@ NLCONSTRAINT Gamma78.c 0 "-Gamma78 + (Gamma810 + Gamma50*2*BR_KS_pimpip*BR_KS_2p
 # Gamma16 = G(K- pi0 nu(tau)) / G(total)
 # Gamma23 = G(K- 2pi0 nu(tau) (ex. K0)) / G(total)
 # Gamma28 = G(K- 3pi0 nu(tau) (ex. K0, eta)) / G(total)
-# Gamma35 = G(Kbar0 pi- nu(tau)) / G(total)
-# Gamma40 = G(Kbar0 pi- pi0 nu(tau)) / G(total)
-# Gamma44 = G(Kbar0 pi- 2pi0 nu(tau)) / G(total)
+# Gamma35 = G(pi- Kbar0 nu(tau)) / G(total)
+# Gamma40 = G(pi- Kbar0 pi0 nu(tau)) / G(total)
+# Gamma44 = G(pi- Kbar0 2pi0 nu(tau) (ex. K0)) / G(total)
 # Gamma53 = G(Kbar0 h- h- h+ nu(tau)) / G(total)
 # Gamma128 = G(K- eta nu(tau)) / G(total)
 # Gamma130 = G(K- pi0 eta nu(tau)) / G(total)
-# Gamma132 = G(Kbar0 pi- eta nu(tau)) / G(total)
+# Gamma132 = G(pi- Kbar0 eta nu(tau)) / G(total)
 # Gamma151 = G(K- omega nu(tau)) / G(total)
 # Gamma801 = G(K- phi nu(tau) (phi->KK)) / G(total)
 # Gamma802 = G(K- pi- pi+ nu(tau) (ex. K0, omega)) / G(total)

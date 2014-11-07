@@ -42,7 +42,7 @@ END
 
 #
 # Gamma35 (PDG node = S035B32)
-# G(Kbar0 pi- nu(tau)) / G(total)
+# G(pi- Kbar0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT L3 Gamma35 pub ACCIARRI 95F
 
@@ -64,7 +64,7 @@ END
 
 #
 # Gamma40 (PDG node = S035B33)
-# G(Kbar0 pi- pi0 nu(tau)) / G(total)
+# G(pi- Kbar0 pi0 nu(tau)) / G(total)
 #
 BEGIN MEASUREMENT L3 Gamma40 pub ACCIARRI 95F
 
