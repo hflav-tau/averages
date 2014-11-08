@@ -145,17 +145,17 @@ alurep.tex.quant.descr = function(quant) {
   alurep.get.texdescr.nv(quant$descr, quant$texdescr)
 }
 
-
-
 ##--- return latex command def with specified multi-line body
-alurep.tex.cmd = function(cmd, body) {
-  paste("\\newcommand{\\", cmd, "}{%\n", body, "}%\n", sep="")
+alurep.tex.cmd.nv = function(cmd, body) {
+  paste("\\htdef{", cmd, "}{%\n", body, "}%", sep="")
 }
+alurep.tex.cmd = Vectorize(alurep.tex.cmd.nv)
 
 ##--- return latex command def with specified one-line body
-alurep.tex.cmd.short = function(cmd, body) {
-  paste("\\newcommand{\\", cmd, "}{", body, "\\xspace}%\n", sep="")
+alurep.tex.cmd.short.nv = function(cmd, body) {
+  paste("\\htdef{", cmd, "}{", body, "}%", sep="")
 }
+alurep.tex.cmd.short = Vectorize(alurep.tex.cmd.short.nv)
 
 ##
 ## return measurement value, stat, syst original values

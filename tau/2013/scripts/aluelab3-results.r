@@ -816,7 +816,7 @@ aluelab.results = function(args) {
     ## "$\\left( \\frac{g_\\tau}{g_\\mu} \\right)_K$",
      sep=" & ", collapse=" & "))
 
-  rc = c(rc, paste("\\newcommand{\\couplingsCorr}{", paste(tex.corr, collapse="\\\\\n"), "}", sep=""))
+  rc = c(rc, alurep.tex.cmd("couplingsCorr", paste(tex.corr, collapse="\\\\\n")))
 
   ##--- make file name for report .tex output
   fname.short = gsub("average[^-]*-*", "", file.name)
@@ -828,7 +828,6 @@ aluelab.results = function(args) {
   if (flag.lepuniv) fname = paste(fname, "-lepuniv", sep="")
   if (flag.kmaltman) fname = paste(fname, "-kmaltman", sep="")
   fname = paste(fname, "-elab.tex", sep="")
-  cat(unlist(rc), sep="\n", file=fname)
   cat("produced file '", fname, "'\n", sep="")
 }
 

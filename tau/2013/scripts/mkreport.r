@@ -483,9 +483,7 @@ get.tex.meas.by.collab = function() {
   collab.meas = sapply(measurements[combination$measurements], function(meas) meas$tags[1])
   collabs = sort(unique(collab.meas))
   collab.nmeas = sapply(collabs, function(collab) sum(collab.meas == collab))
-  return(paste("\\newcommand{\\hfagNumMeas",
-               sapply(collabs, function(x) toTex$trN(x)),
-               "}{", collab.nmeas, "\\xspace}", sep="", collapse="\n"))
+  return(alurep.tex.cmd.short(paste("NumMeas", collabs, sep=""), collab.nmeas))
 }
 
 ##
@@ -686,7 +684,7 @@ get.tex.constraints.used = function() {
 ##
 get.tex.constraint.defs = function() {
   rc = get.tex.constraints.used()
-  return(paste("\\htconstrdef{", names(rc$left), "}{", rc$left, "}{", rc$right, "}{", rc$right.split, "}%", sep="", collapse="\n"))
+  return(paste("\\htconstrdef{", names(rc$left), "}{", rc$left, "}{", rc$right, "}{", rc$right.split, "}%", sep=""))
 }
 
 ##
@@ -738,23 +736,23 @@ mkreport = function(fname) {
   ##
   ## write tex defs of some quantities
   ##
-  tex.defs = paste(
+  tex.defs = c(
     ##--- unitarity check
-    alurep.tex.cmd.short("HfagUnitarityResid",
+    alurep.tex.cmd.short("UnitarityResid",
                          alurep.tex.val.err.auto(quant.val["Gamma998"], quant.err["Gamma998"], perc=TRUE)),
     ##--- measurements
-    alurep.tex.cmd.short("HfagTauMeasNum", as.character(meas.num)),
+    alurep.tex.cmd.short("MeasNum", as.character(meas.num)),
     ##--- quantities corresponding to measurements
-    alurep.tex.cmd.short("HfagTauQuantNum", as.character(quant.num-dummy.quant.num)),
+    alurep.tex.cmd.short("QuantNum", as.character(quant.num-dummy.quant.num)),
     ##--- base quantities
-    alurep.tex.cmd.short("HfagTauBaseQuantNum", as.character(quant.num - constr.num)),
+    alurep.tex.cmd.short("BaseQuantNum", as.character(quant.num - constr.num)),
     ##--- constraints used to relate measurements to base quantities
-    alurep.tex.cmd.short("HfagTauConstrNum", as.character(constr.num - dummy.quant.num)),
-    alurep.tex.cmd.short("HfagTauChisq", sprintf("%.1f", chisq)),
-    alurep.tex.cmd.short("HfagDof", as.character(dof)),
-    alurep.tex.cmd.short("HfagTauChisqProb", alurep.tex.val.auto(chisq.prob, perc=TRUE)),
-    sep="")
-  cat(tex.defs, file=fname, append=TRUE)
+    alurep.tex.cmd.short("ConstrNum", as.character(constr.num - dummy.quant.num)),
+    alurep.tex.cmd.short("Chisq", sprintf("%.1f", chisq)),
+    alurep.tex.cmd.short("Dof", as.character(dof)),
+    alurep.tex.cmd.short("ChisqProb", alurep.tex.val.auto(chisq.prob, perc=TRUE))
+    )
+  cat(tex.defs, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', initial defs\n", sep="")
 
   ##
@@ -772,23 +770,22 @@ mkreport = function(fname) {
   quant.names = setdiff(quant.names, "GammaAll")
   rc = get.tex.table(quant.names)
 
-  cat(rc$defs, "\n", sep="", file=fname, append=TRUE)
+  cat(rc$defs, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', quantity - measurements defs\n", sep="")
 
-  tex.all.tau.br.val = alurep.tex.cmd("HfagTauBrVal", rc$table)
-  cat(tex.all.tau.br.val, file=fname, append=TRUE)
+  tex.all.tau.br.val = alurep.tex.cmd("BrVal", rc$table)
+  cat(tex.all.tau.br.val, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', quantity - measurements table\n", sep="")
 
   ##
   ## write tex macro containing all measurements by reference
   ##
   rc = get.tex.meas.by.ref()
-  cat(rc$defs, file=fname, append=TRUE)
-  cat("\n", file=fname, append=TRUE)
+  cat(rc$defs, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', BR meas by ref definitions\n", sep="")
   ##
-  tex.meas.paper = alurep.tex.cmd("HfagTauMeasPaper", rc$table)
-  cat(tex.meas.paper, file=fname, append=TRUE)
+  tex.meas.paper = alurep.tex.cmd("MeasPaper", rc$table)
+  cat(tex.meas.paper, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', BR meas by ref table content\n", sep="")
   rm(rc)
 
@@ -797,16 +794,16 @@ mkreport = function(fname) {
   ##
   gamma110.names = names(combination$constr.all.comb$Gamma110.c)
   gamma110.names = setdiff(gamma110.names, "Gamma110")
-  tex.tau.br.strange.val = alurep.tex.cmd("HfagTauBrStrangeVal", get.tex.table.simple(gamma110.names, 4, -2))
-  cat(tex.tau.br.strange.val, file=fname, append=TRUE)
+  tex.tau.br.strange.val = alurep.tex.cmd("BrStrangeVal", get.tex.table.simple(gamma110.names, 4, -2))
+  cat(tex.tau.br.strange.val, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', BR strange table content\n", sep="")
 
   ##
   ## write text macro containing total strange BR
   ##
   gamma110.names = "Gamma110"
-  tex.tau.br.strange.tot.val = alurep.tex.cmd("HfagTauBrStrangeTotVal", get.tex.table.simple(gamma110.names, 4, -2))
-  cat(tex.tau.br.strange.tot.val, file=fname, append=TRUE)
+  tex.tau.br.strange.tot.val = alurep.tex.cmd("BrStrangeTotVal", get.tex.table.simple(gamma110.names, 4, -2))
+  cat(tex.tau.br.strange.tot.val, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', BR strange tot table content\n", sep="")
 
   ##
@@ -815,37 +812,36 @@ mkreport = function(fname) {
   gammaAll.names = names(combination$constr.all.comb$GammaAll.c)
   gammaAll.names = c(gammaAll.names, "Gamma998")
   gammaAll.names = setdiff(gammaAll.names, "GammaAll")
-  tex.tau.unitarity.quants = alurep.tex.cmd("HfagTauUnitarityQuants", get.tex.table.simple(gammaAll.names, 4, -2))
-  cat(tex.tau.unitarity.quants, file=fname, append=TRUE)
+  tex.tau.unitarity.quants = alurep.tex.cmd("UnitarityQuants", get.tex.table.simple(gammaAll.names, 4, -2))
+  cat(tex.tau.unitarity.quants, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', unitarity quantities\n", sep="")
 
   ##
   ## write text macro containing correlation of base nodes
   ##
-  tex.all.tau.br.corr = alurep.tex.cmd("HfagTauBrCorr", get.tex.base.nodes.corr())
-  cat(tex.all.tau.br.corr, file=fname, append=TRUE)
+  tex.all.tau.br.corr = alurep.tex.cmd("BrCorr", get.tex.base.nodes.corr())
+  cat(tex.all.tau.br.corr, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', BR correlations table content\n", sep="")
 
   ##
   ## write TeX definitions for all constraint equations
   ##
   tex.constr.defs = get.tex.constraint.defs()
-  cat(tex.constr.defs, file=fname, append=TRUE)
-  cat("\n", file=fname, append=TRUE)
+  cat(tex.constr.defs, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', constraint definitions\n", sep="")
   
   ##
   ## write text macro containing constraint equations
   ##
-  tex.constr.val = alurep.tex.cmd("HfagConstrEqs", get.tex.constraint.equations())
-  cat(tex.constr.val, file=fname, append=TRUE)
+  tex.constr.val = alurep.tex.cmd("ConstrEqs", get.tex.constraint.equations())
+  cat(tex.constr.val, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', constraint table content\n", sep="")
 
   ##
   ## measurements by collaboration
   ##
   tex.num.meas.per.collab = get.tex.meas.by.collab()
-  cat(tex.num.meas.per.collab, file=fname, append=TRUE)
+  cat(tex.num.meas.per.collab, sep="\n", file=fname, append=TRUE)
   cat("file '", fname, "', measurements per collaboration\n", sep="")
 }
 
