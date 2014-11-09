@@ -1,5 +1,5 @@
 #
-# root -b -q "aluAverPlot.cc+(\"plot-vus-hfag-summer2014.input\")"
+# root -b -q "aluAverPlot.cc+(\"plot-taulife-hfag-summer2014.input\")"
 #
 # i       - xmin, xmax, precision, title
 # m       - measurement with symmetric stat & syst errors
@@ -8,8 +8,8 @@
 # p       - PDG average, sets band
 # h       - other averages
 #
-i   0  0    6.4    #tau  [x 10^{-15} s]
-mt  290.29  0.52 0.00  HFAG 2014, prelim.
+i   0  0    6.2  #tau  [x 10^{-15} s]
+mt  290.29  0.52 0.0   HFAG Summer 2014
 mt  290.3   0.5  0.0   PDG 2014 average
 m   290.1   1.5	 1.1   ALEPH
 m   290.17  0.53 0.33  Belle 2013
