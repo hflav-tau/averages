@@ -125,6 +125,7 @@ void aluAverPlot(const std::string& filename, const Int_t nPoints_def, Int_t can
   const Float_t fnPoints_offset(0.6);
   
   TString title, expname[nPointsMax], tempstring;
+  TString fitLabel("Summer 2014");
   Float_t precision;
 
   // -- set up frame for plot
@@ -159,7 +160,10 @@ void aluAverPlot(const std::string& filename, const Int_t nPoints_def, Int_t can
       ifs >> fXmin >> fXmax >> precision;
       ifs.getline(buffer, 200, '\n');
       title = TString(buffer).Strip((TString::EStripType)1, ' '); // remove kLeading whitespace
-
+    } else if (first_ch=='f') {
+      //--- fit label
+      ifs.getline(buffer, 200, '\n');
+      fitLabel = TString(buffer).Strip((TString::EStripType)1, ' '); // remove kLeading whitespace
     } else if (first_ch=='h' || first_ch=='p') {
       //--- other average: h <mean> <sigma> <s-factor> <CL> <label>
       //--- pdg average: p <mean> <sigma> <s-factor> <CL> <label> -- other average
@@ -478,8 +482,9 @@ void aluAverPlot(const std::string& filename, const Int_t nPoints_def, Int_t can
   }
 
   const Float_t xtextNDC( (xtext-TVirtualPad::Pad()->GetX1()) / (TVirtualPad::Pad()->GetX2() - TVirtualPad::Pad()->GetX1()) );
-  HFAGTauLabel("Summer 2014", xtextNDC, 0.03*plotScaleFact, 0.9 * Float_t(canvas_width) / Float_t(560));
-  
+  if (fitLabel != "") {
+    HFAGTauLabel(fitLabel, xtextNDC, 0.03*plotScaleFact, 0.9 * Float_t(canvas_width) / Float_t(560));
+  }
   std::string basefname(filename);
   size_t extPos = basefname.rfind('.');
   if (extPos != std::string::npos) {
