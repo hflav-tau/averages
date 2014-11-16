@@ -126,10 +126,7 @@ aluelab.results = function(args) {
   quant$param.add(comb.params)
   quant$param.add(c(pi=pi))
 
-  quant.texdescr = sapply(combination$quantities, function(x) {if (is.null(x$texdescr)) {""} else {x$texdescr}})
-  quant.descr = sapply(combination$quantities, function(x) {if (is.null(x$descr)) {""} else {x$descr}})
-
-  quant$texdescr.add(alurep.get.texdescr(quant.descr, quant.texdescr))
+  quant$texdescr.add(alurep.get.texdescr.quantities(combination$quantities))
 
   ##
   ## recover some BRs as function of others
@@ -828,6 +825,7 @@ aluelab.results = function(args) {
   if (flag.lepuniv) fname = paste(fname, "-lepuniv", sep="")
   if (flag.kmaltman) fname = paste(fname, "-kmaltman", sep="")
   fname = paste(fname, "-elab.tex", sep="")
+  cat(unlist(rc), sep="\n", file=fname)
   cat("produced file '", fname, "'\n", sep="")
 }
 

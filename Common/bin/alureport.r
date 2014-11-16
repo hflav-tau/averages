@@ -88,14 +88,19 @@ alurep.gamma.texlabel = function(str) {
 ##
 ## get tex description of a quantity in alucomb2 structure
 ##
-alurep.get.texdescr.nv = function(descr, texdescr) {
+alurep.get.texdescr.nv = function(quant, descr, texdescr) {
   repeat {
+    if (quant == "Gamma998" || quant == "GammaAll") {
+      break
+    }
+
     if (!is.null(texdescr) && texdescr != "") {
       ##+++ check for ratio of BR
       texdescr = paste("\\BRF{\\tau^-}{", texdescr, "}", sep="")
       texdescr = gsub("mathrm", "text", texdescr, fixed=TRUE)
       break
     }
+    
     if (is.null(descr) || descr == "") {
       texdescr = ""
       break
@@ -141,8 +146,11 @@ alurep.get.texdescr = Vectorize(alurep.get.texdescr.nv, USE.NAMES=TRUE)
 ##
 ## get tex description of a quantity in alucomb2 structure
 ##
-alurep.tex.quant.descr = function(quant) {
-  alurep.get.texdescr.nv(quant$descr, quant$texdescr)
+alurep.get.texdescr.quantities = function(quantities) {
+  quant.names = names(quantities)
+  quant.texdescr = sapply(quantities, function(x) {if (is.null(x$texdescr)) {""} else {x$texdescr}})
+  quant.descr = sapply(quantities, function(x) {if (is.null(x$descr)) {""} else {x$descr}})
+  alurep.get.texdescr(quant.names, quant.descr, quant.texdescr)
 }
 
 ##--- return latex command def with specified multi-line body

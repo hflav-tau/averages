@@ -1398,9 +1398,9 @@ NLCONSTRAINT Gamma806.c 0 "-Gamma806 + (Gamma50 * (BRA_Kz_KL_KET*BRA_Kzbar_KL_KE
 QUANTITY Gamma805 node S035Z06 descr "G(a1- (-> pi- gamma) nu(tau)) / G(total)"
 
 #
-# GammaAll = G(total)
+# GammaAll = G(all)
 #
-QUANTITY GammaAll node S035S01 descr "G(total)"
+QUANTITY GammaAll node S035S01 descr "G(all)"
 #
 # GammaAll = (Gamma3 + Gamma5 + Gamma9 + Gamma10 + Gamma14 + Gamma16 + Gamma20 + Gamma23 + Gamma27 + Gamma28 + Gamma30 + Gamma35 + Gamma37 + Gamma40 + Gamma42 + Gamma46 + Gamma62 + Gamma70 + Gamma77 + Gamma78 + Gamma93 + Gamma94 + Gamma104 + Gamma126 + Gamma128 + Gamma802 + Gamma803 + Gamma800 + Gamma151 + Gamma130 + Gamma132 + Gamma44 + Gamma53 + Gamma50*(1-2*BR_KS_pimpip*BR_KS_2piz) + Gamma51 + Gamma806 + Gamma805 + Gamma801 + Gamma152 + Gamma103)
 #
@@ -1447,3 +1447,8 @@ QUANTITY GammaAll node S035S01 descr "G(total)"
 # Gamma805 = G(a1- (-> pi- gamma) nu(tau)) / G(total)
 #
 NLCONSTRAINT GammaAll.c 0 "-GammaAll + (Gamma3 + Gamma5 + Gamma9 + Gamma10 + Gamma14 + Gamma16 + Gamma20 + Gamma23 + Gamma27 + Gamma28 + Gamma30 + Gamma35 + Gamma37 + Gamma40 + Gamma42 + Gamma47 + Gamma48 + Gamma804 + Gamma62 + Gamma70 + Gamma77 + Gamma78 + Gamma93 + Gamma94 + Gamma104 + Gamma126 + Gamma128 + Gamma802 + Gamma803 + Gamma800 + Gamma151 + Gamma130 + Gamma132 + Gamma44 + Gamma53 + Gamma50 + Gamma51 + Gamma806 + Gamma805 + Gamma801 + Gamma152 + Gamma103)"
+
+#
+# Gamma998 = 1 - G(all)
+#
+QUANTITY Gamma998 descr "1 - G(all)"
