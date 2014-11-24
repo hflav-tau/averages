@@ -160,7 +160,7 @@ void aluAverPlot(const std::string& filename, const Int_t nPoints_def, Int_t can
       ifs >> fXmin >> fXmax >> precision;
       ifs.getline(buffer, 200, '\n');
       title = TString(buffer).Strip((TString::EStripType)1, ' '); // remove kLeading whitespace
-    } else if (first_ch=='f') {
+    } else if (first_ch=='l') {
       //--- fit label
       ifs.getline(buffer, 200, '\n');
       fitLabel = TString(buffer).Strip((TString::EStripType)1, ' '); // remove kLeading whitespace
