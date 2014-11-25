@@ -27,13 +27,13 @@ NLCONSTRAINT Gamma810.c 0 "-Gamma810 + (Gamma910 + Gamma911 + Gamma811 + Gamma81
 # Gamma910 = G(2pi- pi+ eta(3pi0) nu(tau) (ex. K0)) / G(total)
 #
 QUANTITY Gamma910 descr "G(2pi- pi+ eta(3pi0) nu(tau), (ex. K0)) / G(total)"
-QUANTITY Gamma910 texdescr "2\pi^- \pi^+ \eta \nu_\tau (\eta \to 3\pi^0) ~(\mathrm{ex.~}K^0)"
+QUANTITY Gamma910 texdescr "2\pi^- \pi^+ \eta \nu_\tau ~(\eta \to 3\pi^0) ~(\mathrm{ex.~}K^0)"
 
 #
 # Gamma911 = G(pi- 2pi0 eta(pi+ pi- pi0) nu(tau)) / G(total)
 #
 QUANTITY Gamma911 descr "G(pi- 2pi0 eta(pi+ pi- pi0) nu(tau)) / G(total)"
-QUANTITY Gamma911 texdescr "\pi^- 2\pi^0 \eta \nu_\tau (\eta \to \pi^+ \pi^- \pi^0) ~(\mathrm{ex.~}K^0)"
+QUANTITY Gamma911 texdescr "\pi^- 2\pi^0 \eta \nu_\tau ~(\eta \to \pi^+ \pi^- \pi^0) ~(\mathrm{ex.~}K^0)"
 
 #
 # Gamma811 = G(pi- 2pi0 omega nu(tau)) / G(total)
@@ -64,7 +64,7 @@ NLCONSTRAINT Gamma820.c 0 "-Gamma820 + (Gamma920 + Gamma821)"
 # Gamma920 = G(pi- f1(2pi- 2pi+) nu(tau)) / G(total)
 #
 QUANTITY Gamma920 descr "G(pi- f1(2pi- 2pi+) nu(tau)) / G(total)"
-QUANTITY Gamma920 texdescr "\pi^- f_1 \nu_\tau (f_1 \to 2\pi^- 2\pi^+)"
+QUANTITY Gamma920 texdescr "\pi^- f_1 \nu_\tau ~(f_1 \to 2\pi^- 2\pi^+)"
 
 #
 # Gamma821 = G(3pi- 2pi+ nu(tau) (ex. K0, omega, f1)) / G(total)
@@ -96,7 +96,7 @@ NLCONSTRAINT Gamma830.c 0 "-Gamma830 + (Gamma930 + Gamma831*BR_om_pimpippiz + Ga
 # Gamma930 = G(2pi- pi+ eta(pi+ pi- pi0) nu(tau) (ex. K0)) / G(total)
 #
 QUANTITY Gamma930 descr "G(2pi- pi+ eta(pi+ pi- pi0) nu(tau) (ex. K0)) / G(total)"
-QUANTITY Gamma930 texdescr "2\pi^- \pi^+ \eta \nu_\tau (\eta \to \pi^+\pi^-\pi^0) ~(\mathrm{ex.~}K^0)"
+QUANTITY Gamma930 texdescr "2\pi^- \pi^+ \eta \nu_\tau ~(\eta \to \pi^+\pi^-\pi^0) ~(\mathrm{ex.~}K^0)"
 
 #
 # Gamma831 = G(2pi- pi+ omega nu(tau) (ex. K0)) / G(total)
@@ -138,7 +138,7 @@ QUANTITY Gamma943 texdescr "\pi^- f_1 \nu_\tau (f_1 \to \pi^+ \pi^- \eta, \eta \
 # Gamma944 = G(2pi- pi+ eta(gamma gamma) nu(tau) (ex. K0)) / G(total)
 #
 QUANTITY Gamma944 descr "G(2pi- pi+ eta(gamma gamma) nu(tau) (ex. K0)) / G(total)"
-QUANTITY Gamma944 texdescr "2\pi^- \pi^+ \eta \nu_\tau (\eta \to \gamma\gamma) ~(\mathrm{ex.~}K^0)"
+QUANTITY Gamma944 texdescr "2\pi^- \pi^+ \eta \nu_\tau ~(\eta \to \gamma\gamma) ~(\mathrm{ex.~}K^0)"
 
 #
 # Gamma950 = G(K+ 3pi- pi+ nu(tau) (ex. K0)) / G(total)
@@ -179,13 +179,12 @@ NLCONSTRAINT Gamma103.c 0 "-Gamma103 + (Gamma820 + Gamma822 + Gamma831*BR_om_pim
 #
 # Gamma104 = G(3h- 2h+ pi0  nu(tau) (ex. K0)) / G(total)
 #
-# Gamma104 = Gamma930 + Gamma833 + Gamma831*BR_om_pimpippiz
+# Gamma104 = Gamma830 + Gamma833
 #
-# Gamma930 = G(2pi- pi+ eta(pi+ pi- pi0) nu(tau) (ex. K0)) / G(total)
+# Gamma830 = G(3pi- 2pi+ pi0 nu(tau) (ex. K0)) / G(total)
 # Gamma833 = G(K- 2pi- 2pi+ pi0 nu(tau) (ex. K0)) / G(total)
-# Gamma831 = G(2pi- pi+ omega nu(tau) (ex. K0)) / G(total)
 #
-NLCONSTRAINT Gamma104.c 0 "-Gamma104 + (Gamma930 + Gamma833 + Gamma831*BR_om_pimpippiz)"
+NLCONSTRAINT Gamma104.c 0 "-Gamma104 + (Gamma830 + Gamma833)"
 
 #
 # Gamma76 = G(h- h- h+ 2pi0 nu(tau) (ex. K0)) / G(total)
@@ -278,7 +277,7 @@ NLCONSTRAINT Gamma110.c 0 "-Gamma110 + (Gamma10 + Gamma16 + Gamma23 + Gamma28 + 
 NLCONSTRAINT Gamma910.c 0 "-Gamma910 + (Gamma136*BR_eta_3piz)"
 NLCONSTRAINT Gamma930.c 0 "-Gamma930 + (Gamma136*BR_eta_pimpippiz)"
 NLCONSTRAINT Gamma944.c 0 "-Gamma944 + (Gamma136*BR_eta_2gam)"
-# --- remove wrong constraint used untill 2012 average
+# --- remove wrong constraint used until 2012 average
 NLCONSTRAINT Gamma136.c 0 ""
 
 #
