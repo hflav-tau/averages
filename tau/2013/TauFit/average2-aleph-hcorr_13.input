@@ -18,6 +18,7 @@ INCLUDE ../Common-Mar2012/measurements-aleph.input
 INCLUDE ../Common_2013/measurements-babar.input
 INCLUDE ../Common_2013/measurements-belle_13.input
 INCLUDE ../Common_2013/measurements-cleo.input
+INCLUDE ../Common_2013/measurements-aleph.input
 
 BEGIN COMBINATION
 
@@ -39,7 +40,7 @@ COMBINE
   Gamma810 Gamma910 Gamma911 Gamma811 Gamma812
   Gamma820 Gamma920 Gamma821 Gamma822
   Gamma830 Gamma930 Gamma831 Gamma832 Gamma833
-  Gamma944 Gamma945
+  Gamma944
 
 ##
 ## since we have Gamma50 measurements, ALEPH inclusive estimate on Gamma49
@@ -63,6 +64,13 @@ MODMEAS DROP BaBar Gamma50 prelim TAU12 Sobie.2
 
 ##--- superseeded in BaBar high-multiplicity BRs paper 1209.2734
 MODMEAS DROP BaBar Gamma136 pub AUBERT 08AE
+MODMEAS DROP BaBar Gamma103 pub AUBERT,B 05W
+
+##
+## remove measurement too correlated with 6 pions measurements
+## from the same paper CLEO ANASTASSOV 01
+##
+MODMEAS DROP CLEO Gamma136 pub ANASTASSOV 01
 
 INCLUDE ../Common-Mar2012/parameters.input
 # --- update parameters to PDG 2013
@@ -94,7 +102,8 @@ QUANTITY Gamma802 seed 0.0029
 QUANTITY Gamma803 seed 0.00041
 QUANTITY Gamma800 seed 0.019
 QUANTITY Gamma804 seed 0.00018
-QUANTITY Gamma801 seed 3.7e-05
+QUANTITY Gamma136 seed 2.3e-4
+QUANTITY Gamma801 seed 3.6e-5
 
 # --- needed after inclusion of pi KS KS pi0 nu results
 QUANTITY Gamma51 seed 3.20e-5
