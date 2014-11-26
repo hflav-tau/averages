@@ -1,9 +1,9 @@
 #
-# Gamma945 (PDG node = S035&desig=68)
-# G(pi- 2pi0 eta nu(tau)) / G(total)
+# Gamma128 (PDG node = S035B20)
+# G(K- eta nu(tau)) / G(total)
 #
-BEGIN MEASUREMENT CLEO Gamma945 pub ANASTASSOV 01
+BEGIN MEASUREMENT CLEO Gamma128 pub BARTELT 96
 
-VALUE 1.5e-4 +-0.5e-4 +-0
+VALUE 2.6e-4 +-0.5e-4 +-0.5e-4
 
 END
