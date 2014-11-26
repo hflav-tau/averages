@@ -29,6 +29,7 @@ mkreport.rc = function(alucomb.env) {
 ##
 get.reference = function(tags) {
   bib.pdg.table = list(
+    "BARTELT.96" = "Bartelt:1996iv",
     "DEL-AMO-SANCHEZ.11E" = "delAmoSanchez:2010pc",
     "AUBERT.10B" = "Aubert:2009ag",
     "AUBERT.10F" = "Aubert:2009qj",
