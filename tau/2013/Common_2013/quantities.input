@@ -14,14 +14,14 @@ QUANTITY Gamma808 descr "G(K- K0 Kbar0 pi0 nu(tau))) / G(total)"
 QUANTITY Gamma810 descr "G(2pi- pi+ 3pi0 nu(tau) (ex. K0)) / G(total)"
 QUANTITY Gamma810 texdescr "2\pi^- \pi^+ 3\pi^0 \nu_\tau ~(\mathrm{ex.~}K^0)"
 #
-# Gamma810 = Gamma910 + Gamma911 + Gamma811 + Gamma812
+# Gamma810 = Gamma910 + Gamma911 + Gamma811*BR_om_pimpippiz + Gamma812
 #
 # Gamma910 = G(2pi- pi+ eta(3pi0) nu(tau) (ex. K0)) / G(total)
 # Gamma911 = G(pi- 2pi0 eta(pi+ pi- pi0) nu(tau)) / G(total)
 # Gamma811 = G(pi- 2pi0 omega nu(tau)) / G(total)
 # Gamma812 = G(2pi- pi+ 3pi0 nu(tau) (ex. K0, eta, omega, f1)) / G(total)
 #
-NLCONSTRAINT Gamma810.c 0 "-Gamma810 + (Gamma910 + Gamma911 + Gamma811 + Gamma812)"
+NLCONSTRAINT Gamma810.c 0 "-Gamma810 + (Gamma910 + Gamma911 + Gamma811*BR_om_pimpippiz + Gamma812)"
 
 #
 # Gamma910 = G(2pi- pi+ eta(3pi0) nu(tau) (ex. K0)) / G(total)
