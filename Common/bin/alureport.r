@@ -174,26 +174,36 @@ alurep.tex.cmd.short = Vectorize(alurep.tex.cmd.short.nv)
 ## - syst
 ##
 alurep.tex.meas.val.card.fields = function(meas) {
+  quant.tex = character(0)
+  ee.data = character(0)
+
+  val.txt = attr(meas$value.orig, "input")
+  quant.tex = c(quant.tex, val.txt)
+  ee.data = c(ee.data, val.txt)
+
   if (attr(meas$stat, "input") != "") {
     stat.txt = paste("\\pm", attr(meas$stat, "input"))
+    ee.data = c(ee.data, attr(meas$stat, "input"))
   } else {
     stat.txt = paste("{}^{", attr(meas$stat.p, "input"), "}_{", attr(meas$stat.n, "input"), "}", sep="")
+    ee.data = c(ee.data, attr(meas$stat.p, "input"), attr(meas$stat.n, "input"))
   }
+  quant.tex = c(quant.tex, stat.txt)
+
   if (attr(meas$syst, "input") != "") {
-    syst.txt = paste("\\pm", attr(meas$syst, "input"))
+    syst.txt = attr(meas$syst, "input")
+    if (syst.txt != "0") {
+      quant.tex = c(quant.tex, paste("\\pm", syst.txt))
+      ee.data = c(ee.data, syst.txt)
+    }
   } else {
     syst.txt = paste("{}^{", attr(meas$syst.p, "input"), "}_{", attr(meas$syst.n, "input"), "}", sep="")
-  }
-  val.txt = attr(meas$value.orig, "input")
-
-  if (syst.txt == "\\pm 0") {
-    quant.tex = c(val.txt, stat.txt)
-  } else {
-    quant.tex = c(val.txt, stat.txt, syst.txt)
+    quant.tex = c(quant.tex, syst.txt)
+    ee.data = c(ee.data, attr(meas$syst.p, "input"), attr(meas$syst.n, "input"))
   }
 
-  order = gsub("^[^e]+(|e[+]?([-])?0*(\\d+))$", "\\2\\3", quant.tex, perl=TRUE)
-  order = ifelse(order == "", 0, as.numeric(order))
+  order = gsub("^[^e]+(|e[+]?([-])?0*(\\d+))$", "\\2\\3", ee.data, perl=TRUE)
+  order = ifelse(order == "", 0, as.numeric(order))  
   
   quant.tex = paste(quant.tex, collapse=" ")
   if (max(order) == min(order)) {
