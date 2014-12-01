@@ -288,6 +288,8 @@ aluelab.results = function(args) {
     rc = quant$quant.expr.add("B_tau_s_fit", Gamma110)
   }
 
+  rc = quant$quant.expr.add("B_tau_had_fit", B_tau_VA_fit+B_tau_s_fit)
+
   ##
   ## compute phase space factors for Bmu/Be universality
   ##
@@ -490,7 +492,7 @@ aluelab.results = function(args) {
     "Gamma5", "Be_unitarity", "Be_fit",
     "Gamma3", "Bmu_unitarity", "Bmu_fit",
     "Bmu_by_Be_th", "Be_from_Bmu", "Be_from_taulife", "Be_univ",
-    "Bmu_from_taulife",
+    "Bmu_from_taulife", "B_tau_had_fit",
     "B_tau_VA", "B_tau_VA_unitarity", "B_tau_VA_fit",
     "Gamma110", "B_tau_s_unitarity", "B_tau_s_fit",
     "Gamma110_pdg09",
@@ -711,6 +713,7 @@ aluelab.results = function(args) {
     Vud="%.5f",
     deltaR_su3break="%.3f",
     Be_univ="%.3f",
+    B_tau_had_fit="%.2f",
     B_tau_VA_fit="%.2f",
     B_tau_s_fit="%.3f",
     Vus_mism_sigma="%.1f",
@@ -731,6 +734,7 @@ aluelab.results = function(args) {
   specialFactor = c(
     tau_tau=1e15,
     Be_univ=100,
+    B_tau_had_fit=100,
     B_tau_VA_fit=100,
     B_tau_s_fit=100,
     delta_LD_taupi_pimu=100,
