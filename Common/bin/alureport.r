@@ -128,7 +128,7 @@ alurep.get.texdescr.nv = function(quant, descr, texdescr) {
     descr = gsub("K\\(S\\)0", "K_S^0", descr)
     descr = gsub("K\\(L\\)0", "K_L^0", descr)
     descr = gsub("(nu|tau|mu|pi|omega|eta|gamma)", "\\\\\\1", descr)
-    descr = gsub("\\s+\\(ex[.]", "\\\\;(\\\\text{ex.}", descr)
+    descr = gsub("\\s+\\(ex[.]", "\\\\;(\\\\text{ex.~}", descr)
     descr = gsub("(neutrals)", "\\\\text{\\1}", descr)
     descr = gsub("(particles|strange|total)", "\\\\text{\\1}", descr)
 
