@@ -379,12 +379,14 @@ void TauLFV_UL_plot_comb(Int_t when=2014001)
   hBelle->LabelsOption("v");
   hBelle->GetYaxis()->SetLabelSize(36);
 
-  // hBelle->SetMarkerStyle(kOpenCircle); hBelle->SetMarkerColor(kRed); hBelle->SetMarkerSize(1.0);
-  // hBaBar->SetMarkerStyle(kOpenDiamond); hBaBar->SetMarkerColor(kBlue); hBaBar->SetMarkerSize(1.3);
+  
+  hBelle->SetMarkerStyle(kFullTriangleUp); hBelle->SetMarkerColor(kRed); hBelle->SetMarkerSize(1.5);    
+  hBaBar->SetMarkerStyle(kFullTriangleDown); hBaBar->SetMarkerColor(kBlue); hBaBar->SetMarkerSize(1.5); 
+
   // hCLEO->SetMarkerStyle(kOpenSquare);  hCLEO->SetMarkerColor(kGreen);  hCLEO->SetMarkerSize(0.8);
 
-  hBelle->SetMarkerStyle(kFullTriangleUp); hBelle->SetMarkerColor(kMagenta); hBelle->SetMarkerSize(1.5);
-  hBaBar->SetMarkerStyle(kFullTriangleDown); hBaBar->SetMarkerColor(kCyan); hBaBar->SetMarkerSize(1.5);
+  //  hBelle->SetMarkerStyle(kFullTriangleUp); hBelle->SetMarkerColor(kMagenta); hBelle->SetMarkerSize(1.5);
+  //hBaBar->SetMarkerStyle(kFullTriangleDown); hBaBar->SetMarkerColor(kCyan); hBaBar->SetMarkerSize(1.5);
   //hCLEO->SetMarkerStyle(kFullCircle);  hCLEO->SetMarkerColor(kMagenta);  hCLEO->SetMarkerSize(1.5);
   hLHCb->SetMarkerStyle(kFullSquare); hLHCb->SetMarkerColor(kBlack); hLHCb->SetMarkerSize(1.2);
   hHFAG_CLs->SetMarkerStyle(34); hHFAG_CLs->SetMarkerColor(kGreen); hHFAG_CLs-> SetMarkerSize(1.5);
