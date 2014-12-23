@@ -432,7 +432,7 @@ void TauLFV_UL_plot_comb(Int_t when=2014001)
   TLine l7(KLAMBAR+0.5,ul_min,KLAMBAR+0.5,ul_max); l7.SetLineColor(kGray); l7.Draw();
   TLatex t7(((PILAM-KLAMBAR)*1.0/2.0)+KLAMBAR*1.0,y_latex,"h #Lambda"); t7.SetTextAlign(21); t7.SetTextFont(42); t7.Draw();
 
-  TLegend *leg = new TLegend(0.85,0.3,0.95,0.5);
+  TLegend *leg = new TLegend(0.87,0.3,0.95,0.5);
   leg->SetBorderSize(0);
   leg->SetFillStyle(4000);
   leg->SetFillColor(0);
